@@ -1,0 +1,40 @@
+{
+  "headerOptions": [
+    {
+      "id": 1,
+      "name": "سرویس ها",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/4f1a58293164d31b1a3cf1ef41f6ba4ba4fa4087_1739791745.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": "servic"
+    },
+    {
+      "id": 2,
+      "name": "دیجی کالا",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/e65a134ca4ce423f9724a4a57cde4979f9d7f6b2_1764619352.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": ""
+    },
+    {
+      "id": 3,
+      "name": "45 دقیقه ای",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/f99687ad658dae5f9ef0987c17b246c0d8155127_1764619384.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": "fourtinMinutes"
+    },
+    {
+      "id": 4,
+      "name": "طلای دیجیتال",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/50e9fcb36286ee42c8a428d059001e31b8922496_1764619404.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": "digitalGold"
+    },
+    {
+      "id": 5,
+      "name": "سوپرمارکت",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/43795410570a5e6aa86b0667de24737b6584606f_1764619422.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": "souperMarket"
+    },
+    {
+      "id": 6,
+      "name": "اعتبار خرید",
+      "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/7ae7902fbc209de7d80e79e1e465bf9f8840aec0_1763738479.png?x-oss-process=image/resize,w_300/quality,q_90",
+      "address": "buy"
+    }
+  ]
+}
