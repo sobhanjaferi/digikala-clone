@@ -3,4 +3,5 @@ export interface IheaderOption {
   name: string;
   imgUrl: string;
   address: string;
+  tailwind?: string;
 }

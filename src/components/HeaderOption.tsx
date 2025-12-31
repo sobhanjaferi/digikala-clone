@@ -1,15 +1,15 @@
 import { IheaderOption } from "@/service/headerOptions/types";
 import Link from "next/link";
 
-function HeaderOption({ name, imgUrl, address }: IheaderOption) {
+function HeaderOption({ name, imgUrl, address, tailwind }: IheaderOption) {
   return (
-    <Link href={`/${address}`} className="block md:hidden">
+    <Link href={`/${address}`} className="block lg:hidden">
       <div
-        className={`cursor-pointer min-w-20 min-h-20 rounded-lg border border-gray-300 flex flex-col justify-evenly items-center p-1 text-[12px] font-bold ${
+        className={`cursor-pointer ${tailwind} h-20 rounded-lg border border-gray-300 flex flex-col justify-evenly items-center p-1 text-[12px] font-bold ${
           address ? "" : "bg-red-500 text-white"
         }`}
       >
-        <img src={imgUrl} className="w-10 h-10" alt={name} />
+        <img src={imgUrl} className="w-8 h-8" alt={name} />
 
         <p>{name}</p>
       </div>
