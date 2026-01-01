@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppContextProvider from "@/context/appContext";
+import RQProvider from "@/service/reactQueryProvider/RQProvider";
+import AppContext from "@/context/appContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +24,11 @@ export default function RootLayout({
         <link rel="stylesheet" href="./icons/css/all.min.css" />
       </head>
 
-      <body>{children}</body>
+      <body>
+        <AppContext>
+          <RQProvider>{children}</RQProvider>
+        </AppContext>
+      </body>
     </html>
   );
 }
