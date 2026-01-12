@@ -15,7 +15,7 @@ function HeaderSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCountSlides((prev: number) => (prev < 11 ? (prev += 1) : (prev = 1)));
-    }, 2000);
+    }, 5000);
   }, []);
 
   const HandleForwardSlide = () => {

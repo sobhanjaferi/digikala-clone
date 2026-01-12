@@ -49,7 +49,7 @@ function HeaderSearchBar() {
       <HeaderNavBar />
 
       <div
-        className={`bg-white w-screen h-screen fixed top-0 left-0 right-0 bottom-0 transition-all duration-700 ease-in-out Shadow ${
+        className={`bg-white z-100 w-screen h-screen fixed top-0 left-0 right-0 bottom-0 transition-all duration-700 ease-in-out Shadow ${
           searchBar ? " translate-y-0" : " translate-y-500"
         }`}
       >
