@@ -1,9 +1,10 @@
 "use client";
 
-import useHeaderOptions from "@/service/headerOptions/hook";
+import useHeaderOptions from "@/service/Header/Header-Options/hook";
 import HeaderOption from "./HeaderOption";
-import { IheaderOption } from "@/service/headerOptions/types";
+import { IheaderOption } from "@/service/Header/Header-Options/types";
 import HeaderSearchBar from "./HeaderSearchBar";
+import HeaderSlider from "./HeaderSlider";
 
 function Header() {
   const { data } = useHeaderOptions();
@@ -25,6 +26,10 @@ function Header() {
 
       <section>
         <HeaderSearchBar />
+      </section>
+
+      <section>
+        <HeaderSlider />
       </section>
     </nav>
   );

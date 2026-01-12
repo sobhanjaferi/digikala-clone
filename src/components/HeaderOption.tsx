@@ -1,4 +1,4 @@
-import { IheaderOption } from "@/service/headerOptions/types";
+import { IheaderOption } from "@/service/Header/Header-Options/types";
 import Link from "next/link";
 
 function HeaderOption({ name, imgUrl, address, tailwind }: IheaderOption) {
