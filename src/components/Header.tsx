@@ -5,6 +5,7 @@ import HeaderOption from "./HeaderOption";
 import { IheaderOption } from "@/service/Header/Header-Options/types";
 import HeaderSearchBar from "./HeaderSearchBar";
 import HeaderSlider from "./HeaderSlider";
+import Storys from "./storys";
 
 function Header() {
   const { data } = useHeaderOptions();
@@ -26,6 +27,10 @@ function Header() {
 
       <section>
         <HeaderSearchBar />
+      </section>
+
+      <section>
+        <Storys />
       </section>
 
       <section>
