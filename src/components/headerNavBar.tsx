@@ -43,7 +43,7 @@ function HeaderNavBar() {
   return (
     <div>
       <div className="m-4 text-gray-900 flex justify-end items-center text-[12px]">
-        <div className="flex justify-start items-center lg:w-[24%]">
+        <div className="flex justify-start items-center lg:w-[24%] cursor-pointer">
           <NavigateBeforeIcon />
           <p>تحویل به استان البرز , مشکین دشت</p>
           <PlaceIcon />
@@ -63,7 +63,7 @@ function HeaderNavBar() {
             ))}
           </ul>
           |
-          <div className="flex justify-end items-center ml-5">
+          <div className="flex justify-end items-center ml-5 cursor-pointer">
             <p className="mb-1">دسته بندی کالاها</p>
 
             <MenuIcon />

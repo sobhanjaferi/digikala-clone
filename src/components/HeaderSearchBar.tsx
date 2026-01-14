@@ -1,6 +1,5 @@
 "use client";
 
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
 import StartIcon from "@mui/icons-material/Start";
 
@@ -8,42 +7,48 @@ import { useAppContext } from "@/context/appContext";
 import SearchIpt from "./SearchIpt";
 import SingingBtn from "./SinginBtn";
 import HeaderNavBar from "./headerNavBar";
+import Link from "next/link";
 
 function HeaderSearchBar() {
   const { searchBar, setSearchBar } = useAppContext();
 
   return (
     <>
-      <div className={`flex justify-evenly items-center lg:-mt-5 lg:mx-2`}>
+      <div
+        className={`flex justify-evenly lg:justify-between items-center lg:-mt-5 lg:mx-10`}
+      >
         <SingingBtn />
-        <div className="p-2 rounded-full border border-gray-300 text-gray-500 lg:border-none flex justify-evenly items-center">
-          <NotificationsNoneIcon />
-        </div>
-        <div
-          className="relative w-[80%] lg:w-[55%]"
-          onClick={() => {
-            let newSearchBar = !searchBar;
 
-            setSearchBar(newSearchBar);
+        <div className="hidden lg:flex justify-between items-center w-200">
+          <div
+            className="relative w-[80%] lg:w-150 xl:w-full"
+            onClick={() => {
+              let newSearchBar = !searchBar;
 
-            localStorage.setItem("searchBar", JSON.stringify(newSearchBar));
-          }}
-        >
-          <div className="absolute left-3 top-2.5 text-gray-600">
-            <FilterCenterFocusIcon />
+              setSearchBar(newSearchBar);
+
+              localStorage.setItem("searchBar", JSON.stringify(newSearchBar));
+            }}
+          >
+            <div className="absolute left-3 top-2.5 text-gray-600">
+              <FilterCenterFocusIcon />
+            </div>
+
+            <p className="text-red-600 font-bold absolute right-28 top-3">
+              دیجی کالا
+            </p>
+
+            <SearchIpt />
           </div>
 
-          <p className="text-red-600 font-bold absolute right-28 top-3">
-            دیجی کالا
-          </p>
-
-          <SearchIpt />
+          <Link href="/">
+            <img
+              src="./images/digikala-header.png"
+              alt="digikalaHeader"
+              className="w-40 h-7 hidden lg:block ml-5"
+            />
+          </Link>
         </div>
-        <img
-          src="./images/digikala-header.png"
-          alt="digikalaHeader"
-          className="w-40 hidden lg:block"
-        />
       </div>
 
       <HeaderNavBar />
