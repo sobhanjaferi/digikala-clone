@@ -20,12 +20,10 @@ function HeaderSlider() {
 
   const HandleForwardSlide = () => {
     setCountSlides((prev) => (prev < 11 ? (prev += 1) : (prev = 1)));
-    console.log(countSlides);
   };
 
   const HandleBackwardSlide = () => {
     setCountSlides((prev) => (prev > 1 ? (prev -= 1) : (prev = 11)));
-    console.log(countSlides);
   };
 
   return (
@@ -49,15 +47,15 @@ function HeaderSlider() {
       >
         <div
           onClick={HandleBackwardSlide}
-          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-4 lg:pl-5 lg:pr-3 text-gray-700 active:opacity-20`}
+          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-3 lg:pl-4 lg:pr-2 text-gray-700 active:opacity-20`}
         >
-          <ArrowBackIosIcon fontSize="small" />
+          <ArrowBackIosIcon fontSize="inherit" />
         </div>
         <div
           onClick={HandleForwardSlide}
-          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-4 lg:pl-4 lg:pr-4 text-gray-700 active:opacity-20`}
+          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2 pr-1 sm:py-2 sm:pl-2.5 sm:pr-1.5 lg:py-3 lg:pl-3.5 lg:pr-2.5 text-gray-700 active:opacity-20`}
         >
-          <ArrowForwardIosIcon fontSize="small" />
+          <ArrowForwardIosIcon fontSize="inherit" />
         </div>
       </section>
     </div>
