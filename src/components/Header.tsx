@@ -4,7 +4,6 @@ import useHeaderOptions from "@/service/Header/Header-Options/hook";
 import HeaderOption from "./HeaderOption";
 import { IheaderOption } from "@/service/Header/Header-Options/types";
 import HeaderSearchBar from "./HeaderSearchBar";
-import HeaderSlider from "./HeaderSlider";
 import Storys from "./storys";
 
 function Header() {
@@ -31,10 +30,6 @@ function Header() {
 
       <section>
         <Storys />
-      </section>
-
-      <section>
-        <HeaderSlider />
       </section>
     </nav>
   );

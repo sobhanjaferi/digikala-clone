@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
-import { IappContext } from "./contextTypes";
+import { IappContext } from "./appContextTypes";
 import React, { useContext } from "react";
 
 const containerContext = createContext({} as IappContext);
