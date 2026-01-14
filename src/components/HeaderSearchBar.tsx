@@ -2,6 +2,7 @@
 
 import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
 import StartIcon from "@mui/icons-material/Start";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 import { useAppContext } from "@/context/appContext";
 import SearchIpt from "./SearchIpt";
@@ -19,9 +20,13 @@ function HeaderSearchBar() {
       >
         <SingingBtn />
 
-        <div className="hidden lg:flex justify-between items-center w-200">
+        <div className="ml-5 sm:ml-10 p-2 rounded-full border border-gray-300 text-gray-500 lg:hidden flex justify-center items-center cursor-pointer">
+          <NotificationsNoneIcon />
+        </div>
+
+        <div className="flex justify-end sm:justify-center lg:justify-between items-center w-200">
           <div
-            className="relative w-[80%] lg:w-150 xl:w-full"
+            className="relative w-[85%] mr-5 lg:w-150 xl:w-full"
             onClick={() => {
               let newSearchBar = !searchBar;
 
