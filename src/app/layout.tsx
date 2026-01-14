@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppContextProvider from "@/context/appContext";
-import RQProvider from "@/service/reactQueryProvider/RQProvider";
+import RQProvider from "@/context/RQProvider";
 import AppContext from "@/context/appContext";
 
 export const metadata: Metadata = {
