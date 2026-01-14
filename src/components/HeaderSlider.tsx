@@ -51,13 +51,13 @@ function HeaderSlider() {
           onClick={HandleBackwardSlide}
           className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-4 lg:pl-5 lg:pr-3 text-gray-700 active:opacity-20`}
         >
-          <ArrowBackIosIcon fontSize="inherit" />
+          <ArrowBackIosIcon fontSize="small" />
         </div>
         <div
           onClick={HandleForwardSlide}
           className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-4 lg:pl-4 lg:pr-4 text-gray-700 active:opacity-20`}
         >
-          <ArrowForwardIosIcon fontSize="inherit" />
+          <ArrowForwardIosIcon fontSize="small" />
         </div>
       </section>
     </div>
