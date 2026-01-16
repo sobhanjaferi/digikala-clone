@@ -31,11 +31,9 @@ function HeaderSlider() {
       className="flex justify-between items-center overflow-auto scrollbar-hide gap-3 mx-3 relative"
       onMouseEnter={() => {
         setShowArrowKeys(true);
-        console.log(showArrowKeys);
       }}
       onMouseLeave={() => {
         setShowArrowKeys(false);
-        console.log(showArrowKeys);
       }}
     >
       <SlideOfHeaderSlider imgUrl={data[countSlides]?.imgUrl} />
