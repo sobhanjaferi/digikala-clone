@@ -1,5 +1,3 @@
-"use client";
-
 import axios from "axios";
 import { IheaderOption } from "./types";
 import { useQuery } from "@tanstack/react-query";
