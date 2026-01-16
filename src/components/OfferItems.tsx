@@ -72,7 +72,7 @@ function OfferItems() {
   return (
     <div
       dir="rtl"
-      className="flex justify-evenly items-center w-full lg:container h-30 overflow-auto gap-3 scrollbar-hide my-5 lg:mx-auto"
+      className="flex justify-evenly items-center w-full lg:w-7/10 lg:container h-30 overflow-auto gap-3 scrollbar-hide my-10 lg:mx-auto"
     >
       {OffersData.map((item: IofferItem) => (
         <OfferItem {...item} key={item.id} />
