@@ -2,11 +2,13 @@
 
 import OfferSliderTimer from "./OfferSliderTimer";
 import OfferSliderProduct from "./OfferSliderProduct";
-import UseOfferSlider from "@/service/Offer-Slider/hook";
+import useOfferSlider from "@/service/Offer-Slider/hook";
 import { IofferSlide } from "@/service/Offer-Slider/types";
 
 function OfferSlider() {
-  const { data } = UseOfferSlider();
+  const { data } = useOfferSlider();
+
+  console.log(data);
 
   return (
     <div className="flex justify-center">

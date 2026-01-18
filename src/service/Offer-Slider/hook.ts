@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import { IofferSlide } from "./types";
 import axios from "axios";
+import { IofferSlide } from "./types";
 
-export default function UseOfferSlider() {
+export default function useOfferSlider() {
   return useQuery<IofferSlide[]>({
-    queryKey: ["offerSlider"],
+    queryKey: ["OfferSlider"],
 
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/OfferSlider");
+      const { data } = await axios("http://localhost:8000/OfferSlider");
 
       return data as IofferSlide[];
     },
