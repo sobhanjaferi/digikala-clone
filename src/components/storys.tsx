@@ -4,9 +4,10 @@ import { Istory } from "@/service/Header/Header-Storys/types";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import LoadingAndError from "./LoadingAndError";
 
 function Storys() {
-  const { data = [], isError, isFetching } = useStorys();
+  const { data = [], isError, isFetching, isPending } = useStorys();
 
   return (
     <div className="hidden lg:flex justify-between items-center relative">
@@ -18,17 +19,11 @@ function Storys() {
         className="flex justify-start items-center h-40 my-5 gap-1 lg:container overflow-auto scrollbar-hide m-auto w-7/10"
         dir="rtl"
       >
-        {isFetching && (
-          <h2 className="m-auto font-bold text-2xl" dir="ltr">
-            loading ...
-          </h2>
-        )}
-
-        {isError && (
-          <h2 className="m-auto font-bold text-2xl">
-            data not found please reload again
-          </h2>
-        )}
+        <LoadingAndError
+          isError={isError}
+          isFetching={isFetching}
+          isPending={isPending}
+        />
 
         {!isFetching &&
           !isError &&

@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import LoadingAndError from "./LoadingAndError";
 
 function HeaderSlider() {
-  const { data = [] } = useHeaderSlider();
+  const { data = [], isError, isPending, isFetching } = useHeaderSlider();
   const [countSlides, setCountSlides] = useState<number>(1);
   const [showArrowKeys, setShowArrowKeys] = useState<boolean>(false);
 
@@ -27,36 +28,43 @@ function HeaderSlider() {
   };
 
   return (
-    <div
-      className="flex justify-between items-center overflow-auto scrollbar-hide gap-3 mx-3 relative"
-      onMouseEnter={() => {
-        setShowArrowKeys(true);
-      }}
-      onMouseLeave={() => {
-        setShowArrowKeys(false);
-      }}
-    >
-      <SlideOfHeaderSlider imgUrl={data[countSlides]?.imgUrl} />
-
-      <section
-        className={`flex justify-between items-center absolute bottom-2 right-2 lg:bottom-8 lg:right-5 gap-3 ${
-          showArrowKeys ? "block" : "hidden"
-        }`}
+    <>
+      <LoadingAndError
+        isError={isError}
+        isFetching={isFetching}
+        isPending={isPending}
+      />
+      <div
+        className="flex justify-between items-center overflow-auto scrollbar-hide gap-3 mx-3 relative"
+        onMouseEnter={() => {
+          setShowArrowKeys(true);
+        }}
+        onMouseLeave={() => {
+          setShowArrowKeys(false);
+        }}
       >
-        <div
-          onClick={HandleBackwardSlide}
-          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-3 lg:pl-4 lg:pr-2 text-gray-700 active:opacity-20`}
+        <SlideOfHeaderSlider imgUrl={data[countSlides]?.imgUrl} />
+
+        <section
+          className={`flex justify-between items-center absolute bottom-2 right-2 lg:bottom-8 lg:right-5 gap-3 ${
+            showArrowKeys ? "block" : "hidden"
+          }`}
         >
-          <ArrowBackIosIcon fontSize="inherit" />
-        </div>
-        <div
-          onClick={HandleForwardSlide}
-          className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2 pr-1 sm:py-2 sm:pl-2.5 sm:pr-1.5 lg:py-3 lg:pl-3.5 lg:pr-2.5 text-gray-700 active:opacity-20`}
-        >
-          <ArrowForwardIosIcon fontSize="inherit" />
-        </div>
-      </section>
-    </div>
+          <div
+            onClick={HandleBackwardSlide}
+            className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2.5 pr-0.5 sm:py-2 sm:pl-3 sm:pr-1 lg:py-3 lg:pl-4 lg:pr-2 text-gray-700 active:opacity-20`}
+          >
+            <ArrowBackIosIcon fontSize="inherit" />
+          </div>
+          <div
+            onClick={HandleForwardSlide}
+            className={`bg-white cursor-pointer rounded-full flex justify-center items-center py-1.5 pl-2 pr-1 sm:py-2 sm:pl-2.5 sm:pr-1.5 lg:py-3 lg:pl-3.5 lg:pr-2.5 text-gray-700 active:opacity-20`}
+          >
+            <ArrowForwardIosIcon fontSize="inherit" />
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
 
