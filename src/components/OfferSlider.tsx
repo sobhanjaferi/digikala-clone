@@ -17,14 +17,14 @@ function OfferSlider() {
 
   const HandleScrollRight = () => {
     scrollRef.current?.scrollBy({
-      left: -300,
+      left: -157,
       behavior: "smooth",
     });
   };
 
   const HandleScrollLeft = () => {
     scrollRef.current?.scrollBy({
-      left: 300,
+      left: 157,
       behavior: "smooth",
     });
   };
