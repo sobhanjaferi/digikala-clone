@@ -14,14 +14,14 @@ function Storys() {
 
   const HandleScrollLeft = () => {
     scrollRef.current?.scrollBy({
-      left: 300,
+      left: 120,
       behavior: "smooth",
     });
   };
 
   const HandleScrollRight = () => {
     scrollRef.current?.scrollBy({
-      left: -300,
+      left: -120,
       behavior: "smooth",
     });
   };
