@@ -11,7 +11,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRef } from "react";
 
 function OfferSlider() {
-  const { data, isError, isPending, isFetching } = useOfferSlider();
+  const { data = [], isError, isPending, isFetching } = useOfferSlider();
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -34,7 +34,7 @@ function OfferSlider() {
       <div className="lg:m-5 lg:mt-0 w-full xl:w-310 h-80 lg:rounded-2xl text-white bg-red-500 flex flex-col-reverse justify-between lg:flex-row items-center p-3 relative">
         <section
           onClick={HandleScrollRight}
-          className="absolute top-35 left-10 text-black rounded-full bg-white pt-1.75 pb-2.5 pl-3.5 pr-1.5 Shadow active:opacity-20 cursor-pointer"
+          className="absolute top-40 lg:top-35 left-10 text-black rounded-full bg-white pt-1.75 pb-2.5 pl-3.5 pr-1.5 Shadow active:opacity-20 cursor-pointer"
         >
           <ArrowBackIosIcon fontSize="small" />
         </section>
@@ -47,7 +47,7 @@ function OfferSlider() {
           {!isError &&
             !isFetching &&
             !isPending &&
-            data?.map((item: IofferSlide) => (
+            data.map((item: IofferSlide) => (
               <OfferSliderProduct key={item.id} {...item} />
             ))}
 
@@ -60,7 +60,7 @@ function OfferSlider() {
 
         <section
           onClick={HandleScrollLeft}
-          className="absolute top-35 right-10 lg:right-45 text-black rounded-full bg-white pt-1.5 pb-2.5 px-2.5 Shadow active:opacity-20 cursor-pointer"
+          className="absolute top-40 lg:top-35 right-10 lg:right-45 text-black rounded-full bg-white pt-1.5 pb-2.5 px-2.5 Shadow active:opacity-20 cursor-pointer"
         >
           <ArrowForwardIosIcon fontSize="small" />
         </section>
