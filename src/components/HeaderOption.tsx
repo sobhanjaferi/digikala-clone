@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function HeaderOption({ name, imgUrl, address, tailwind }: IheaderOption) {
   return (
-    <Link href={`/${address}`} className="block lg:hidden">
+    <Link href={`/${address}`} className="block lg:hidden mt-20">
       <div
         className={`cursor-pointer ${tailwind} h-20 rounded-lg border border-gray-300 flex flex-col justify-evenly items-center p-1 text-[12px] font-bold ${
           address ? "" : "bg-red-500 text-white"

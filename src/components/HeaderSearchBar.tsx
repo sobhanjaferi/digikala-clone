@@ -9,14 +9,29 @@ import SearchIpt from "./SearchIpt";
 import SingingBtn from "./SinginBtn";
 import HeaderNavBar from "./headerNavBar";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function HeaderSearchBar() {
   const { searchBar, setSearchBar } = useAppContext();
 
+  const [screenScrollSize, setScreenScrollSize] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScreenScrollSize(window.scrollY >= 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <>
+    <div className="relative">
       <div
-        className={`flex justify-evenly lg:justify-between items-center lg:-mt-5 lg:mx-10`}
+        className={`flex justify-evenly lg:justify-between items-center lg:-mt-5 fixed top-0 lg:top-5 left-0 right-0 bg-white z-100 w-full h-20 lg:px-10 xl:pr-40 xl:px-30 ${
+          screenScrollSize ? "shadow-md shadow-gray-700/80" : ""
+        }`}
       >
         <SingingBtn />
 
@@ -50,13 +65,19 @@ function HeaderSearchBar() {
             <img
               src="./images/digikala-header.png"
               alt="digikalaHeader"
-              className="w-40 h-7 hidden lg:block ml-5"
+              className="w-40 h-6 hidden lg:block ml-5"
             />
           </Link>
         </div>
       </div>
 
-      <HeaderNavBar />
+      <section
+        className={`mb-5 lg:mb-0 lg:mt-15 pb-1 ${
+          screenScrollSize ? "" : "shadow-md shadow-gray-700/80"
+        }`}
+      >
+        <HeaderNavBar />
+      </section>
 
       <div
         className={`bg-white z-100 w-screen h-screen fixed top-0 left-0 right-0 bottom-0 transition-all duration-700 ease-in-out Shadow ${
@@ -80,7 +101,7 @@ function HeaderSearchBar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
