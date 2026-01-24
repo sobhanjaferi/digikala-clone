@@ -1,5 +1,5 @@
 import Chaptears from "@/components/chapters";
-import Header from "@/components/Header";
+import Header from "@/components/HeaderMobileSlider";
 import HeaderSlider from "@/components/HeaderSlider";
 import OfferItems from "@/components/OfferItems";
 import OfferSlider from "@/components/OfferSlider";

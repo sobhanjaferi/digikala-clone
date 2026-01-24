@@ -4,7 +4,7 @@ function OfferItem({ imgUrl, content }: { imgUrl: string; content: string }) {
       <img
         src={imgUrl}
         alt="OfferImg"
-        className="rounded-full w-10 h-10 lg:w-15 lg:h-15"
+        className="rounded-full w-10 h-10 lg:w-15 lg:h-15 bg-gray-300/80"
       />
 
       <p className="text-center text-[12px] max-w-16 mt-2">{content}</p>
