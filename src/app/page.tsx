@@ -1,3 +1,4 @@
+import AllProductChaptiers from "@/components/AllProductChaptiers";
 import Chaptears from "@/components/chapters";
 import Header from "@/components/HeaderMobileSlider";
 import HeaderSlider from "@/components/HeaderSlider";
@@ -21,7 +22,7 @@ export default function Home() {
       </section>
 
       <section>
-        <OfferSlider />
+        <OfferSlider anyStyles="bg-red-500" />
       </section>
 
       <section className="flex justify-center items-center">
@@ -37,13 +38,21 @@ export default function Home() {
         <SupperMarketOffer />
       </section>
 
-      <section className="hidden lg:flex justify-center items-center">
+      <section className="block lg:hidden">
+        <OfferSlider anyStyles="bg-green-500" />
+      </section>
+
+      <section className="flex justify-center items-center">
         <Chaptears
           imgOne="https://dkstatics-public.digikala.com/digikala-adservice-banners/7c1a0f6823ed2715da19fab343af64249f864d28_1768209175.jpg?x-oss-process=image/quality,q_95"
           imgTwo="https://dkstatics-public.digikala.com/digikala-adservice-banners/d4f51d8b3c9509229a63d0f26a9e446be35a63ac_1768905395.jpg?x-oss-process=image/quality,q_95"
           imgThree="https://dkstatics-public.digikala.com/digikala-adservice-banners/3b9253377a4786f44d06f69f7b05f2c19cae8637_1754212018.jpg?x-oss-process=image/quality,q_95"
           imgFour="https://dkstatics-public.digikala.com/digikala-adservice-banners/caf1317aeb16dcc620c9b89438a351b2ccb4df1e_1752061907.gif?x-oss-process=image"
         />
+      </section>
+
+      <section>
+        <AllProductChaptiers />
       </section>
     </>
   );

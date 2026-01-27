@@ -10,7 +10,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRef } from "react";
 
-function OfferSlider() {
+function OfferSlider({ anyStyles }: { anyStyles: string }) {
   const { data = [], isError, isPending, isFetching } = useOfferSlider();
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,7 +31,9 @@ function OfferSlider() {
 
   return (
     <div className="flex justify-center lg:mx-5">
-      <div className="lg:m-5 lg:mt-0 w-full xl:w-310 h-80 lg:rounded-2xl text-white bg-red-500 flex flex-col-reverse justify-between lg:flex-row items-center p-3 relative">
+      <div
+        className={`lg:m-5 lg:mt-0 w-full xl:w-310 h-80 lg:rounded-2xl text-white ${anyStyles} flex flex-col-reverse justify-between lg:flex-row items-center p-3 relative`}
+      >
         <section
           onClick={HandleScrollRight}
           className="absolute top-40 lg:top-35 left-10 text-black rounded-full bg-white pt-1.75 pb-2.5 pl-3.5 pr-1.5 Shadow active:opacity-20 cursor-pointer"
