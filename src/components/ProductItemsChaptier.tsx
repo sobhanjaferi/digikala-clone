@@ -1,9 +1,15 @@
-function ProductItemsChaptier() {
+function ProductItemsChaptier({
+  imgUrl,
+  title,
+}: {
+  imgUrl: string;
+  title: string;
+}) {
   return (
-    <section className="w-30 sm:w-32 lg:w-35 h-40 bg-blue-500 p-2 flex flex-col justify-between items-center">
-      <p className="w-full h-full bg-amber-300">img</p>
+    <section className="w-30 h-30 sm:w-32 lg:h-40 p-2 flex flex-col justify-between items-center cursor-pointer">
+      <img src={imgUrl} alt={title} className="w-full h-full" />
 
-      <h1 className="text-sm sm:text-md md:text-lg">item content</h1>
+      <h2 className="text-sm sm:text-md text-center">{title}</h2>
     </section>
   );
 }

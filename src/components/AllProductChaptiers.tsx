@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from "react";
 import ProductItemsChaptier from "./ProductItemsChaptier";
+import useAllProductChaptiers from "@/service/All-product-chaptiers/hook";
+import IproductChaptier from "@/service/All-product-chaptiers/types";
 
 function AllProductChaptiers() {
   const [screenSize, setScreenSize] = useState<boolean>(false);
+
+  const { data = [] } = useAllProductChaptiers();
 
   useEffect(() => {
     setScreenSize((prev) => (window.innerWidth >= 1024 ? true : false));
@@ -37,14 +41,16 @@ function AllProductChaptiers() {
       {/* =============== Main Section =============== */}
 
       <main
-        className="w-full mx-auto lg:container mb-10 px-5 overflow-auto 2xl:flex justify-center items-center"
+        className="w-full h-85 mx-auto lg:container mb-15 px-5 overflow-auto 2xl:flex justify-center items-center"
         dir="rtl"
       >
         <div
-          className="w-300 sm:w-7xl lg:w-350 h-full gap-5 grid grid-cols-9"
+          className="w-300 sm:w-7xl lg:w-350 h-full lg:gap-0 grid grid-cols-9"
           dir="rtl"
         >
-          <ProductItemsChaptier />
+          {data.map((item: IproductChaptier) => (
+            <ProductItemsChaptier key={item.id} {...item} />
+          ))}
         </div>
       </main>
     </div>
