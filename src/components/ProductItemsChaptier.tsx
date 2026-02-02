@@ -6,7 +6,7 @@ function ProductItemsChaptier({
   title: string;
 }) {
   return (
-    <section className="w-30 h-30 sm:w-32 lg:h-40 p-2 flex flex-col justify-between items-center cursor-pointer">
+    <section className="w-30 h-30 p-2 flex flex-col justify-between items-center cursor-pointer">
       <img src={imgUrl} alt={title} className="w-full h-full" />
 
       <h2 className="text-sm sm:text-md text-center">{title}</h2>

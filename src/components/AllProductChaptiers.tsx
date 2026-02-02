@@ -41,7 +41,7 @@ function AllProductChaptiers() {
       {/* =============== Main Section =============== */}
 
       <main
-        className="w-full h-85 mx-auto lg:container mb-15 px-5 overflow-auto 2xl:flex justify-center items-center"
+        className="w-full h-85 mx-auto lg:w-300 lg:container mb-15 px-5 overflow-auto 2xl:flex justify-center items-center"
         dir="rtl"
       >
         <div
