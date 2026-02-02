@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ProductItemsChaptier from "./ProductItemsChaptier";
 
 function AllProductChaptiers() {
   const [screenSize, setScreenSize] = useState<boolean>(false);
@@ -35,7 +36,17 @@ function AllProductChaptiers() {
 
       {/* =============== Main Section =============== */}
 
-      <main className="grid "></main>
+      <main
+        className="w-full mx-auto lg:container mb-10 px-5 overflow-auto 2xl:flex justify-center items-center"
+        dir="rtl"
+      >
+        <div
+          className="w-300 sm:w-7xl lg:w-350 h-full gap-5 grid grid-cols-9"
+          dir="rtl"
+        >
+          <ProductItemsChaptier />
+        </div>
+      </main>
     </div>
   );
 }
