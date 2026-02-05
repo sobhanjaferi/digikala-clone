@@ -57,7 +57,10 @@ export default function Home() {
       </section>
 
       <section>
-        <SupperOffers />
+        <SupperOffers
+          imgUrlItemOne="https://dkstatics-public.digikala.com/digikala-adservice-banners/c98ee0c7437d338f1b70132096b4f128c5081dec_1769512573.jpg?x-oss-process=image/quality,q_95"
+          imgUrlItemTwo="https://dkstatics-public.digikala.com/digikala-adservice-banners/5495233c0b9501d5013b300353c6b649c4420c25_1769600815.jpg?x-oss-process=image/quality,q_95"
+        />
       </section>
     </>
   );
