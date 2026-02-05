@@ -4,11 +4,17 @@ import { useEffect, useState } from "react";
 import ProductItemsChaptier from "./ProductItemsChaptier";
 import useAllProductChaptiers from "@/service/All-product-chaptiers/hook";
 import IproductChaptier from "@/service/All-product-chaptiers/types";
+import LoadingAndError from "./LoadingAndError";
 
 function AllProductChaptiers() {
   const [screenSize, setScreenSize] = useState<boolean>(false);
 
-  const { data = [] } = useAllProductChaptiers();
+  const {
+    data = [],
+    isError,
+    isFetching,
+    isPending,
+  } = useAllProductChaptiers();
 
   useEffect(() => {
     setScreenSize((prev) => (window.innerWidth >= 1024 ? true : false));
@@ -51,6 +57,12 @@ function AllProductChaptiers() {
           {data.map((item: IproductChaptier) => (
             <ProductItemsChaptier key={item.id} {...item} />
           ))}
+
+          <LoadingAndError
+            isError={isError}
+            isFetching={isFetching}
+            isPending={isPending}
+          />
         </div>
       </main>
     </div>
