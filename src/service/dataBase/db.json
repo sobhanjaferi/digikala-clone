@@ -436,5 +436,15 @@
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-mega-menu/6f236efd9caae4d1c3177f37c483aa44c3092b6a_1753614680.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
       "title": "پت شاپ"
     }
+  ],
+  "supperOfferItems": [
+    {
+      "id": 1,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-adservice-banners/c98ee0c7437d338f1b70132096b4f128c5081dec_1769512573.jpg?x-oss-process=image/quality,q_95"
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-adservice-banners/5495233c0b9501d5013b300353c6b649c4420c25_1769600815.jpg?x-oss-process=image/quality,q_95"
+    }
   ]
 }
