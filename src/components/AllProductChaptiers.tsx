@@ -46,6 +46,13 @@ function AllProductChaptiers() {
 
       {/* =============== Main Section =============== */}
 
+      <section className="w-full h-full flex justify-center items-center">
+        <LoadingAndError
+          isError={isError}
+          isFetching={isFetching}
+          isPending={isPending}
+        />
+      </section>
       <main
         className="w-full h-85 mx-auto lg:w-300 lg:container mb-15 px-5 overflow-auto 2xl:flex justify-center items-center"
         dir="rtl"
@@ -57,12 +64,6 @@ function AllProductChaptiers() {
           {data.map((item: IproductChaptier) => (
             <ProductItemsChaptier key={item.id} {...item} />
           ))}
-
-          <LoadingAndError
-            isError={isError}
-            isFetching={isFetching}
-            isPending={isPending}
-          />
         </div>
       </main>
     </div>
