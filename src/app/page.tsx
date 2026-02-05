@@ -5,6 +5,7 @@ import HeaderSlider from "@/components/HeaderSlider";
 import OfferItems from "@/components/OfferItems";
 import OfferSlider from "@/components/OfferSlider";
 import SupperMarketOffer from "@/components/SupperMarketOffer";
+import SupperOffers from "@/components/supperOffers";
 
 export default function Home() {
   return (
@@ -53,6 +54,10 @@ export default function Home() {
 
       <section>
         <AllProductChaptiers />
+      </section>
+
+      <section>
+        <SupperOffers />
       </section>
     </>
   );
