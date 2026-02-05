@@ -1,8 +1,17 @@
-function SupperOfferItem() {
+function SupperOfferItem({
+  imgUrl,
+  newStyles,
+}: {
+  imgUrl: string;
+  newStyles?: string;
+}) {
   return (
-    <>
-      <h1>item</h1>
-    </>
+    <div>
+      <img
+        src={imgUrl}
+        className={`rounded-2xl cursor-pointer mx-auto ${newStyles}`}
+      />
+    </div>
   );
 }
 
