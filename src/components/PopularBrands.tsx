@@ -9,7 +9,7 @@ function PopularBrands() {
   const { data = [] } = usePopularBrans();
 
   return (
-    <div className="lg:container lg:mx-auto mx-5 mt-5 mb-10 flex flex-col justify-end items-end">
+    <div className="lg:container w-full lg:w-310 lg:mx-auto mx-5 mt-5 mb-10 flex flex-col justify-end items-end">
       <section className="flex flex-row-reverse mb-5 mr-5">
         <StarOutlineIcon />
 
