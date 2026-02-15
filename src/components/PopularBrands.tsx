@@ -7,9 +7,8 @@ import IpopularBrand from "@/service/Popular-Brands/types";
 
 // =============== Material UI Icons ===============
 
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 function PopularBrands() {
   const { data = [] } = usePopularBrans();
@@ -31,11 +30,11 @@ function PopularBrands() {
   };
 
   return (
-    <div className="lg:container w-full lg:w-310 lg:mx-auto mx-5 mt-5 mb-10 flex flex-col justify-end items-end relative">
-      <section className="flex flex-row-reverse mb-5 mr-5">
-        <StarOutlineIcon />
+    <div className="lg:container w-full lg:w-310 lg:mx-auto mx-5 mt-5 mb-10 flex flex-col justify-end items-end lg:items-center relative">
+      <section className="flex justify-between items-end flex-row-reverse mb-5 mr-5">
+        <StarOutlineIcon color="warning" />
 
-        <h1>محبوب ترین برندها</h1>
+        <h1 className="lg:text-2xl lg:mr-2">محبوب ترین برندها</h1>
       </section>
 
       <div
