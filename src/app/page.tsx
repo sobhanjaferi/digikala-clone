@@ -76,7 +76,10 @@ export default function Home() {
         />
       </section>
 
-      <section>
+      <section className="lg:grid lg:grid-cols-4 lg:w-full xl:w-7/10 lg:container lg:mx-auto rounded-2xl lg:border lg:border-gray-500/40 p-2">
+        <YourFavorits />
+        <YourFavorits />
+        <YourFavorits />
         <YourFavorits />
       </section>
     </>
