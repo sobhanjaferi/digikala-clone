@@ -7,6 +7,7 @@ import OfferSlider from "@/components/OfferSlider";
 import PopularBrands from "@/components/PopularBrands";
 import SupperMarketOffer from "@/components/SupperMarketOffer";
 import SupperOffers from "@/components/supperOffers";
+import YourFavorits from "@/components/YourFavorits";
 
 export default function Home() {
   return (
@@ -73,6 +74,10 @@ export default function Home() {
           imgUrlItemOne="https://dkstatics-public.digikala.com/digikala-adservice-banners/73eb539db714dd85501916f8126044a416bd032d_1770702614.jpg?x-oss-process=image/quality,q_95"
           imgUrlItemTwo="https://dkstatics-public.digikala.com/digikala-adservice-banners/7d33b6c06441a4b48142ad788cafb5a09ba0abaf_1770702779.jpg?x-oss-process=image/quality,q_95"
         />
+      </section>
+
+      <section>
+        <YourFavorits />
       </section>
     </>
   );
