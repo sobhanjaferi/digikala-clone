@@ -67,6 +67,13 @@ export default function Home() {
       <section className="flex justify-center items-center">
         <PopularBrands />
       </section>
+
+      <section className="hidden lg:block">
+        <SupperOffers
+          imgUrlItemOne="https://dkstatics-public.digikala.com/digikala-adservice-banners/73eb539db714dd85501916f8126044a416bd032d_1770702614.jpg?x-oss-process=image/quality,q_95"
+          imgUrlItemTwo="https://dkstatics-public.digikala.com/digikala-adservice-banners/7d33b6c06441a4b48142ad788cafb5a09ba0abaf_1770702779.jpg?x-oss-process=image/quality,q_95"
+        />
+      </section>
     </>
   );
 }
