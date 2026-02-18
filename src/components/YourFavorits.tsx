@@ -13,13 +13,23 @@ function YourFavorits() {
         </div>
       </div>
       <div
-        className="w-fullh-50 lg:h-70 lg:container lg:mx-auto overflow-auto scrollbar-hide gap-2 flex justify-start items-center lg:grid lg:grid-cols-2"
+        className="w-full h-50 lg:h-70 lg:container lg:mx-auto overflow-auto scrollbar-hide gap-2 flex justify-start items-center lg:grid lg:grid-cols-2"
         dir="rtl"
       >
         <YourFavoritItem />
         <YourFavoritItem />
         <YourFavoritItem />
         <YourFavoritItem />
+        <div className="gap-2 flex justify-start items-center h-full lg:hidden">
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+          <YourFavoritItem />
+        </div>
       </div>
       <p className="text-blue-600 hidden lg:block mx-auto my-2">{`<`} مشاهده</p>
     </div>
