@@ -4,9 +4,11 @@ import IyourFavoritItem from "../types";
 
 export default function useYourFavoritsFour() {
   return useQuery<IyourFavoritItem[]>({
-    queryKey: ["yourFavorits"],
+    queryKey: ["yourFavoritsFour"],
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/yourFavoritsFour");
+      const { data } = await axios.get(
+        "http://localhost:8000/yourFavoritsFour",
+      );
 
       return data as IyourFavoritItem[];
     },

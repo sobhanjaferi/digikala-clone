@@ -16,7 +16,10 @@ function AllYourFavorits() {
   const { data: dataFour = [] } = useYourFavoritsFour();
 
   return (
-    <section className="lg:grid lg:grid-cols-4 lg:w-full xl:w-7/10 lg:container lg:mx-auto rounded-2xl lg:border lg:border-gray-500/40 p-2 gap-4">
+    <section
+      className="lg:grid lg:grid-cols-4 lg:w-full xl:w-7/10 lg:container lg:mx-auto rounded-2xl lg:border lg:border-gray-500/40 p-2 gap-4"
+      dir="rtl"
+    >
       <YourFavorits data={dataOne} />
       <YourFavorits data={dataTwo} />
       <YourFavorits data={dataThree} />

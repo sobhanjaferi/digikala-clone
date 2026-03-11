@@ -8,7 +8,6 @@ import OfferSlider from "@/components/OfferSlider";
 import PopularBrands from "@/components/PopularBrands";
 import SupperMarketOffer from "@/components/SupperMarketOffer";
 import SupperOffers from "@/components/supperOffers";
-import YourFavorits from "@/components/YourFavorits";
 
 export default function Home() {
   return (
@@ -77,7 +76,7 @@ export default function Home() {
         />
       </section>
 
-      <section>
+      <section className="mb-5">
         <AllYourFavorits />
       </section>
     </main>

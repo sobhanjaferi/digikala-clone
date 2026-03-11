@@ -4,7 +4,7 @@ import IyourFavoritItem from "../types";
 
 export default function useYourFavoritsTwo() {
   return useQuery<IyourFavoritItem[]>({
-    queryKey: ["yourFavorits"],
+    queryKey: ["yourFavoritsTwo"],
     queryFn: async () => {
       const { data } = await axios.get("http://localhost:8000/yourFavoritsTwo");
 
