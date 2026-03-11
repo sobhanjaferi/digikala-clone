@@ -1,4 +1,5 @@
 import AllProductChaptiers from "@/components/AllProductChaptiers";
+import AllYourFavorits from "@/components/AllyourFavorits";
 import Chaptears from "@/components/chapters";
 import Header from "@/components/HeaderMobileSlider";
 import HeaderSlider from "@/components/HeaderSlider";
@@ -76,11 +77,8 @@ export default function Home() {
         />
       </section>
 
-      <section className="lg:grid lg:grid-cols-4 lg:w-full xl:w-7/10 lg:container lg:mx-auto rounded-2xl lg:border lg:border-gray-500/40 p-2 gap-4">
-        <YourFavorits />
-        <YourFavorits />
-        <YourFavorits />
-        <YourFavorits />
+      <section>
+        <AllYourFavorits />
       </section>
     </main>
   );
