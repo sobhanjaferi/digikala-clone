@@ -1,6 +1,6 @@
 export default interface IyourFavoritItem {
-  id: number;
-  title: string;
+  id?: number;
+  title?: string;
   itemOne: IyourFavoritItemProduct;
   itemTwo: IyourFavoritItemProduct;
   itemThree: IyourFavoritItemProduct;
@@ -12,8 +12,8 @@ export default interface IyourFavoritItem {
   itemNine: IyourFavoritItemProduct;
 }
 
-interface IyourFavoritItemProduct {
-  id: number;
+export interface IyourFavoritItemProduct {
+  id?: number;
   imgUrl: string;
   content: string;
   price: string;
