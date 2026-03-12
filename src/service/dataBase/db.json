@@ -538,5 +538,249 @@
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-brands/100012444.jpg",
       "title": "فولیکا"
     }
+  ],
+  "yourFavoritsOne": [
+    {
+      "id": 1,
+      "title": "جوراب مردانه"
+    },
+
+    {
+      "id": 2,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/133eade16ce07c6d4c638d429b8e447867ae28c8_1664624808.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه لنتر مدل ساده",
+      "price": "655,700"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/a8eefdfeabb600c8d2196908369ecb556c549646_1754987908.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه سیرداش",
+      "price": "739,000"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/8ba5d1b523828bebf065bfc58dcb97e9e5bc9780_1684309692.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه لنتر مدل ساده کد SAM",
+      "price": "635,700"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/86021277172b4e1364848ce6975214d1b4be8f43_1754583308.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه سیرداش مدل 185",
+      "price": "739,000"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/81ffe2ea15e1c1cbb00cfe71ec5cb5698e4d97aa_1660129410.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق کوتاه مردانه لنتر مدل مچی",
+      "price": "315,000"
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/c666019737a428d5a2351558f26a50feb1e685ed_1695494512.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه تن پوش هنگامه ",
+      "price": "260,700"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/723deb338c8210127676cc55e45219be58532bd5_1649231004.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب مچی مردانه پاوین مدل میکس",
+      "price": "260,000"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/576e58501b1290edcd852a324d907be28c0a2fa7_1754987833.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه سیرداش مدل 008",
+      "price": "739,000"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/43a6febeafb016bc68605ce31dc161151fdce914_1680207590.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه لنتر مدل ساده",
+      "price": "330,000"
+    }
+  ],
+  "yourFavoritsTwo": [
+    {
+      "id": 1,
+      "title": "شورت مردانه"
+    },
+
+    {
+      "id": 2,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/5750b5349f1d00eb7845303af1c6ca58dceb5dad_1661185609.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه پنبینه مدل صادراتی",
+      "price": "286,000"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/ee0f34a81aaf8a16311118a7945ae2fe0475ad61_1755618379.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت اسلیپ مردانه چیندکا مدل سوپر نخ پنب...",
+      "price": "231,000"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/6e2895269bc7456f41ab99b235fdedc833d8b67f_1661075935.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه پنبینه مدل صادراتی",
+      "price": "286,000"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/1565c2ec645257c682422ac0a62ef450259c0f1e_1715158092.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه مدل اسلیپ کد 10",
+      "price": "265,000"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/9479afc9332dc3e1391690610bd0621389c402a3_1659507768.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه پنبینه مدل صادراتی",
+      "price": "251,000"
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/b91c3d4ab5425dfb8828a0c3b652d43bbd668921_1718177846.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه مدل 353 مجموعه 3 عددی",
+      "price": "749,000"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/bc6b608574b5f5d869ca819a7216d51694d51796_1644128250.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه پونتو بلانکو مدل 199-10-...",
+      "price": "3,800,000"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/f9325e2b5d5c98a254843b7d213bfa871ef2ca08_1734829298.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت سلیب مردانه پوشاک ناطقیان مدل ...",
+      "price": "179,000"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/507523f74c94ad5c60c41a31f7e67466a56fed5b_1661232940.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "شورت مردانه پنبینه مدل نیم باکسر ...",
+      "price": "330,000"
+    }
+  ],
+  "yourFavoritsThree": [
+    {
+      "id": 1,
+      "title": "زیر پوش مردانه"
+    },
+
+    {
+      "id": 2,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/bdf78c58faf90d930347871f83e2bc7d8d326b2a_1684680776.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیر پوش خشتی مردانه تولیدی پاران ...",
+      "price": "1,896,000"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/05b3dcf03b036e7f886a2d3e47310231e29c4cce_1730901840.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیرپوش رکابی مردانه نیکو مدل 1564 دورو ضخیم",
+      "price": "177,200"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/fc0b8f2c0cbd16e1715a3d4f7500b51eb7c1b4a4_1659954121.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیر پوش خشتی مردانه پنبینه مدل صادراتی",
+      "price": "337,000"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/509b6a2d2a3267b2abe3e9f805d0e132376d5388_1704826774.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیرپوش رکابی مردانه ماییلدا مدل پنبه ای کد ...",
+      "price": "361,000"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/777fb516366f3e2f88323f575fc9e735da50c586_1714198326.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیرپوش رکابی مردانه پنبینه مدل نخ پنبه خال...",
+      "price": "337,000"
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/5b1633d4b89c95e280922a62e44134a391b3e440_1724841989.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیر پوش خشتی مردانه ایزی دو مدل...",
+      "price": "1,688,000"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/622a9916a72ff48cb3228ccae7d3b971be7d53f1_1659855516.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیر پوش خشتی مردانه پنبینه مدل صادراتی",
+      "price": "337,000"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/f188ea9707b08a1f0ba47e5ef77886e354e12f8d_1670067004.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیرپوش مردانه تولیدی پاران مدل صادراتی",
+      "price": "337,000"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/26187c424ee83bdfe4fa2520d6097026b71b210c_1613495615.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "زیرپوش رکابی مردانه مدل ggvh35695",
+      "price": "152,000"
+    }
+  ],
+  "yourFavoritsFour": [
+    {
+      "id": 1,
+      "title": "جوراب زنانه و مردانه"
+    },
+
+    {
+      "id": 2,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/86d94b790a940fdf5a46401f7e2f61f3287e5e69_1646431664.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق کوتاه مدل 02",
+      "price": "58,800"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/00be7c89695018c783f943e34eaf28080786e818_1729095112.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مردانه تن پوش هنگامه مدل کش اسپر...",
+      "price": "139,450"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/952242e2d5e70db9cc3c981865eb2e8f81a42609_1697357796.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب مدل اسپرت کد 01154-6 بسته 3 عددی",
+      "price": "299,990"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/bf570f920cd632a4ff6b0ca49b01defd2f8633c7_1625309975.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب تن پوش هنگامه مدل کد T-002",
+      "price": "142,750"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/c3fb981f6abe49d657e26f101649c5f5156e464b_1600229811.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب پاتریس طرح هویی مدل 67-2271251",
+      "price": "85,900"
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/6cf67910ecc4d7ae14cc2508e8b6f818c6635e09_1722632423.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب مدل مچی ساده نخ پنبه اعلا بسته 6 عددی",
+      "price": "183,000"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/4b4897b1820c3072a069baef66a0e490b40fccad_1711788293.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق بلند مدل FW03-FOS بسته 3 عددی",
+      "price": "399,000"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/e551000362d2c35aff1de366fd6e23ec567e0be6_1666430907.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب تن پوش هنگامه مدل  حوله ای تیک بسته...",
+      "price": "345,710"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/a147961362ef6e7911549394473a096589a999ce_1735315070.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
+      "content": "جوراب ساق کوتاه مدل تدی بسته 6 عددی ",
+      "price": "258,000"
+    }
   ]
 }

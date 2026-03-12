@@ -1,4 +1,5 @@
 import AllProductChaptiers from "@/components/AllProductChaptiers";
+import AllYourFavorits from "@/components/AllyourFavorits";
 import Chaptears from "@/components/chapters";
 import Header from "@/components/HeaderMobileSlider";
 import HeaderSlider from "@/components/HeaderSlider";
@@ -10,7 +11,7 @@ import SupperOffers from "@/components/supperOffers";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <section>
         <Header />
       </section>
@@ -74,6 +75,10 @@ export default function Home() {
           imgUrlItemTwo="https://dkstatics-public.digikala.com/digikala-adservice-banners/7d33b6c06441a4b48142ad788cafb5a09ba0abaf_1770702779.jpg?x-oss-process=image/quality,q_95"
         />
       </section>
-    </>
+
+      <section className="mb-5">
+        <AllYourFavorits />
+      </section>
+    </main>
   );
 }

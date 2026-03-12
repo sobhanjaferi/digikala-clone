@@ -25,6 +25,8 @@ function OfferSliderTimer() {
         clearInterval(secondInterval);
       }
     }, 1000);
+
+    () => clearInterval(secondInterval);
   }, []);
 
   return (
