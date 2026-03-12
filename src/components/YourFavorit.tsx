@@ -2,9 +2,9 @@ import IyourFavoritItem from "@/service/Your-Favorits/types";
 
 function YourFavoritItem({ id, imgUrl, content, price }: IyourFavoritItem) {
   return (
-    <div className="min-w-40 lg:w-1/2 h-full flex flex-col justify-between lg:justify-center items-start text-right rounded-xl border border-gray-300 lg:border-none">
+    <div className="min-w-40 lg:w-1/2 h-full flex flex-col justify-between lg:justify-center items-start text-right rounded-xl lg:rounded-none border border-gray-300 lg:p-3 cursor-pointer">
       <img
-        className={`w-full h-6/10 lg:h-full lg:${id >= 5 && "hidden"} rounded-xl`}
+        className={`w-full h-6/10 lg:h-full lg:${id >= 6 && "hidden"} rounded-xl`}
         src={imgUrl}
       />
 

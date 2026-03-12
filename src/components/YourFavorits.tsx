@@ -22,7 +22,7 @@ function YourFavorits({ data }: { data: IyourFavoritItem[] }) {
         className="w-full h-55 lg:h-70 lg:container lg:mx-auto overflow-auto lg:overflow-hidden scrollbar-hide flex justify-start items-center lg:justify-center"
         dir="rtl"
       >
-        <div className="gap-2 flex justify-start items-center h-full lg:grid lg:grid-cols-2">
+        <div className="gap-1 flex justify-start items-center h-full lg:grid lg:grid-cols-2">
           {data.map((item: IyourFavoritItem) => {
             if (!item.title) {
               return <YourFavoritItem {...item} key={item.id} />;
