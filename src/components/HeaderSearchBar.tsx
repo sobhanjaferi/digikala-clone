@@ -33,7 +33,9 @@ function HeaderSearchBar() {
           screenScrollSize ? "shadow-md shadow-gray-700/80" : ""
         }`}
       >
-        <SingingBtn />
+        <Link href="/Login&&Signin">
+          <SingingBtn />
+        </Link>
 
         <div className="ml-5 sm:ml-10 p-2 rounded-full border border-gray-300 text-gray-500 lg:hidden flex justify-center items-center cursor-pointer">
           <NotificationsNoneIcon />
