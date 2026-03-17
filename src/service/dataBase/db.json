@@ -37,7 +37,6 @@
       "address": "buy"
     }
   ],
-
   "headerStorys": [
     {
       "id": 1,
@@ -140,7 +139,6 @@
       "content": "دیگه بدونه آنتن نمون..."
     }
   ],
-
   "headerSlider": [
     {
       "id": 1,
@@ -544,7 +542,6 @@
       "id": 1,
       "title": "جوراب مردانه"
     },
-
     {
       "id": 2,
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/133eade16ce07c6d4c638d429b8e447867ae28c8_1664624808.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
@@ -605,7 +602,6 @@
       "id": 1,
       "title": "شورت مردانه"
     },
-
     {
       "id": 2,
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/5750b5349f1d00eb7845303af1c6ca58dceb5dad_1661185609.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
@@ -666,7 +662,6 @@
       "id": 1,
       "title": "زیر پوش مردانه"
     },
-
     {
       "id": 2,
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/bdf78c58faf90d930347871f83e2bc7d8d326b2a_1684680776.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
@@ -727,7 +722,6 @@
       "id": 1,
       "title": "جوراب زنانه و مردانه"
     },
-
     {
       "id": 2,
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/86d94b790a940fdf5a46401f7e2f61f3287e5e69_1646431664.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
@@ -781,6 +775,60 @@
       "imgUrl": "https://dkstatics-public.digikala.com/digikala-products/a147961362ef6e7911549394473a096589a999ce_1735315070.jpg?x-oss-process=image/resize,m_lfit,h_160,w_160/quality,q_80",
       "content": "جوراب ساق کوتاه مدل تدی بسته 6 عددی ",
       "price": "258,000"
+    }
+  ],
+  "loginAndSignin": [
+    {
+      "id": "83ee",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "5bd2",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "6d41",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "f7a6",
+      "emailOrNumber": "99391609280"
+    },
+    {
+      "id": "7610",
+      "emailOrNumber": "990"
+    },
+    {
+      "id": "04db",
+      "emailOrNumber": "990"
+    },
+    {
+      "id": "23c2",
+      "emailOrNumber": "90"
+    },
+    {
+      "id": "6929",
+      "emailOrNumber": "99391609280"
+    },
+    {
+      "id": "9c28",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "be6f",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "14b0",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "f11e",
+      "emailOrNumber": "09939160928"
+    },
+    {
+      "id": "ee57",
+      "emailOrNumber": "09939160928"
     }
   ]
 }
