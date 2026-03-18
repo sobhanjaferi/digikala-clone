@@ -2,12 +2,13 @@
 
 import usePostLoginAndSigninFormData from "@/service/Login-and-signin/hook";
 import { TloginAndSignin } from "@/service/Login-and-signin/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function LoginAndSigninForm() {
   const [isFcous, setIsFcous] = useState<boolean>(false);
 
   const [isUserIptNumber, setIsUserIptNumber] = useState<boolean>(false);
+  const [isUserIptEmail, setIsUserIptEmail] = useState<boolean>(false);
   const [userIpt, setUserIpt] = useState<TloginAndSignin>({
     emailOrNumber: "",
   });
@@ -15,8 +16,8 @@ function LoginAndSigninForm() {
   const { mutate } = usePostLoginAndSigninFormData();
   let splitUserIpt = userIpt.emailOrNumber.split("");
 
-  let [second, setSecond] = useState<number>(4);
-  let [minet, setMinet] = useState<number>(0);
+  let [second, setSecond] = useState<number>(59);
+  let [minet, setMinet] = useState<number>(2);
 
   const HandleSubmit = () => {
     mutate(userIpt);
@@ -24,6 +25,9 @@ function LoginAndSigninForm() {
     if (splitUserIpt[0] == "0") {
       setIsUserIptNumber(true);
       localStorage.setItem("userNumber", JSON.stringify(userIpt.emailOrNumber));
+    } else if (splitUserIpt[0] != "0") {
+      setIsUserIptEmail(true);
+      setIsUserIptNumber(false);
     }
 
     const timer = setInterval(() => {
@@ -32,15 +36,14 @@ function LoginAndSigninForm() {
       if (second == 0 && minet > 0) {
         setSecond((second = 59));
         setMinet((minet -= 1));
-      }
-      if (second == 0 && minet == 0) {
+      } else if (second == 0 && minet == 0) {
         clearInterval(timer);
       }
     }, 1000);
   };
 
   const HandleReturnTimer = () => {
-    setSecond((second = 40));
+    setSecond((second = 59));
     setMinet((minet = 2));
 
     const timer = setInterval(() => {
@@ -49,8 +52,7 @@ function LoginAndSigninForm() {
       if (second == 0 && minet > 0) {
         setSecond((second = 59));
         setMinet((minet -= 1));
-      }
-      if (second == 0 && minet == 0) {
+      } else if (second == 0 && minet == 0) {
         clearInterval(timer);
       }
     }, 1000);
@@ -79,14 +81,17 @@ function LoginAndSigninForm() {
           htmlFor="numberOrEmail"
           className="text-gray-500 text-[12px] mb-5"
         >
-          {isUserIptNumber
+          {isUserIptNumber || isUserIptEmail
             ? `کد تایید برای شماره ${localStorage.getItem("userNumber")} پیامک شده`
             : "لطفا شماره موبایل یا ایمیل خود را وارد کنید"}
+
+          {isUserIptEmail &&
+            "حساب کاربری با مشخصات وارد شده وجود ندارد. لطفا از شماره تلفن همراه برای ساخت حساب کاربری استفاده نمایید."}
         </label>
 
         <div className="w-full relative">
           <input
-            type={splitUserIpt[0] == "0" ? "number" : "email"}
+            type="text"
             id="numberOrEmail"
             onClick={() => setIsFcous(true)}
             onChange={(e) => {
