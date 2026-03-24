@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function HeaderSearchBar() {
-  const { searchBar, setSearchBar } = useAppContext();
+  const { searchBar, setSearchBar, isUserAxist } = useAppContext();
 
   const [screenScrollSize, setScreenScrollSize] = useState<boolean>(false);
 
@@ -33,9 +33,13 @@ function HeaderSearchBar() {
           screenScrollSize ? "shadow-md shadow-gray-700/80" : ""
         }`}
       >
-        <Link href="/Login&&Signin">
+        {isUserAxist ? (
           <SingingBtn />
-        </Link>
+        ) : (
+          <Link href="/Login&&Signin">
+            <SingingBtn />
+          </Link>
+        )}
 
         <div className="ml-5 sm:ml-10 p-2 rounded-full border border-gray-300 text-gray-500 lg:hidden flex justify-center items-center cursor-pointer">
           <NotificationsNoneIcon />

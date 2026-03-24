@@ -2,61 +2,111 @@
 
 import usePostLoginAndSigninFormData from "@/service/Login-and-signin/hook";
 import { TloginAndSignin } from "@/service/Login-and-signin/types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import Link from "next/link";
+import { useAppContext } from "@/context/appContext";
 
 function LoginAndSigninForm() {
   const [isFcous, setIsFcous] = useState<boolean>(false);
 
-  const [isUserIptNumber, setIsUserIptNumber] = useState<boolean>(false);
-  const [isUserIptEmail, setIsUserIptEmail] = useState<boolean>(false);
+  // =============== checking user is login or signin ===============
+  // =============== set user ipt type ===============
+  const {
+    isUserAxist,
+    setIsUserAxist,
+    userIptType,
+    setUserIptType,
+    isUserNumber,
+  } = useAppContext();
+
+  // =============== get user data ===============
   const [userIpt, setUserIpt] = useState<TloginAndSignin>({
     emailOrNumber: "",
   });
 
   const { mutate } = usePostLoginAndSigninFormData();
+
   let splitUserIpt = userIpt.emailOrNumber.split("");
 
+  const [firstNumbers, setFirstNumbers] = useState<string[]>([
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ]);
+
+  // =============== user timer vars ===============
+
+  const [randomCode, setRandomCode] = useState<number | null>(null);
   let [second, setSecond] = useState<number>(59);
   let [minet, setMinet] = useState<number>(2);
 
+  // =============== timer for user enter the code ===============
+  const intervalTimer = useEffect(() => {
+    const timer = setInterval(() => {
+      setSecond((prev) => (prev -= 1));
+
+      if (second == 0 && minet > 0) {
+        setSecond((prev) => 59);
+
+        setMinet((prev) => (prev -= 1));
+      } else if (second == 0 && minet == 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
+
+    () => clearInterval(timer);
+  }, []);
+
   const HandleSubmit = () => {
-    mutate(userIpt);
+    // =============== checked ipt type ===============
 
-    if (splitUserIpt[0] == "0") {
-      setIsUserIptNumber(true);
+    firstNumbers.forEach((number) => {
+      if (splitUserIpt[0] === number) {
+        setUserIptType("number");
+
+        // =============== post data to API ===============
+        mutate(userIpt);
+      }
+      intervalTimer;
+    });
+  };
+
+  // =============== saved user number in localStorage ===============
+  useEffect(() => {
+    userIptType == "number" &&
       localStorage.setItem("userNumber", JSON.stringify(userIpt.emailOrNumber));
-    } else if (splitUserIpt[0] != "0") {
-      setIsUserIptEmail(true);
-      setIsUserIptNumber(false);
-    }
+  }, [userIptType]);
 
-    const timer = setInterval(() => {
-      setSecond((second -= 1));
-
-      if (second == 0 && minet > 0) {
-        setSecond((second = 59));
-        setMinet((minet -= 1));
-      } else if (second == 0 && minet == 0) {
-        clearInterval(timer);
-      }
-    }, 1000);
-  };
-
+  // =============== return timer for enter new secr code ===============
   const HandleReturnTimer = () => {
-    setSecond((second = 59));
-    setMinet((minet = 2));
+    setSecond((prev) => 59);
+    setMinet((prev) => 2);
 
-    const timer = setInterval(() => {
-      setSecond((second -= 1));
-
-      if (second == 0 && minet > 0) {
-        setSecond((second = 59));
-        setMinet((minet -= 1));
-      } else if (second == 0 && minet == 0) {
-        clearInterval(timer);
-      }
-    }, 1000);
+    intervalTimer;
   };
+
+  // =============== user secr code ===============
+  useEffect(() => {
+    if (userIptType == "number") {
+      const code: number = Math.floor(Math.random() * 100000);
+
+      setTimeout(() => {
+        setRandomCode(code);
+      }, 5000);
+    }
+  }, [userIptType]);
+
+  useEffect(() => {
+    randomCode != null && alert(`کد ورود شما: ${randomCode}`);
+  }, [randomCode]);
 
   return (
     <section className="w-full h-full flex flex-col justify-center items-center">
@@ -67,26 +117,26 @@ function LoginAndSigninForm() {
       />
 
       <form
-        action=""
         method="post"
-        className={`w-full flex flex-col justify-start items-end p-5 ${isUserIptNumber && "-mb-6"} mt-5`}
+        className={`w-full flex flex-col justify-start items-end p-5 ${userIptType == "number" && "-mb-6"} mt-5`}
       >
         <h1 className="my-5 font-bold">
-          {isUserIptNumber
+          {userIptType == "number"
             ? "کد تایید را وارد کنید"
             : "ورود یا ثبت‌نام در دیجی‌کالا"}
         </h1>
 
         <label
           htmlFor="numberOrEmail"
-          className="text-gray-500 text-[12px] mb-5"
+          className="text-gray-500 text-[12px] mb-5 text-right"
         >
-          {isUserIptNumber || isUserIptEmail
-            ? `کد تایید برای شماره ${localStorage.getItem("userNumber")} پیامک شده`
-            : "لطفا شماره موبایل یا ایمیل خود را وارد کنید"}
+          {userIptType == "number" &&
+            `کد تایید برای شماره ${isUserNumber} پیامک شده`}
 
-          {isUserIptEmail &&
-            "حساب کاربری با مشخصات وارد شده وجود ندارد. لطفا از شماره تلفن همراه برای ساخت حساب کاربری استفاده نمایید."}
+          {userIptType == null && "لطفا شماره موبایل یا ایمیل خود را وارد کنید"}
+
+          {userIptType == "email" &&
+            "حساب کاربری با مشخصات وارد شده وجود ندارد. لطفا از شماره تلفن همراه برای ساخت حساب کاربری استفاده نمایید"}
         </label>
 
         <div className="w-full relative">
@@ -97,6 +147,12 @@ function LoginAndSigninForm() {
             onChange={(e) => {
               e.target.value != "" ? setIsFcous(true) : setIsFcous(false);
 
+              if (randomCode != null) {
+                if (randomCode === parseInt(e.target.value)) {
+                  setIsUserAxist(true);
+                }
+              }
+
               setUserIpt((prev) => {
                 return {
                   ...prev,
@@ -104,20 +160,20 @@ function LoginAndSigninForm() {
                 };
               });
             }}
-            className={`w-full text-right border border-gray-400 rounded-lg p-3 focus:outline-black focus:outline-1 ${isUserIptNumber && "focus:outline-cyan-300"}`}
+            className={`w-full text-right border border-gray-400 rounded-lg p-3 focus:outline-black focus:outline-1 ${userIptType == "number" && "focus:outline-cyan-300"}`}
           />
 
           <label
             htmlFor="numberOrEmail"
             className={`text-sm absolute w-46.5 text-center transition-all duration-200 
             ${isFcous ? "-translate-y-3 text-black bg-white" : "translate-y-3.5 text-gray-500"}
-            right-3 cursor-text ${isUserIptNumber && "hidden"}`}
+            right-3 cursor-text ${userIptType == "number" && "hidden"}`}
           >
             شماره موبایل یا پست الکترونیک
           </label>
         </div>
 
-        {isUserIptNumber &&
+        {userIptType == "number" &&
           (second > 0 || minet > 0 ? (
             <p className="text-center mx-auto mt-5 flex gap-2 text-gray-700">
               ثانیه مانده تا دریافت مجدد کد
@@ -134,15 +190,27 @@ function LoginAndSigninForm() {
             </p>
           ))}
 
-        <button
-          type="reset"
-          className="p-3 rounded-lg bg-red-500/90 w-full my-5 text-white cursor-pointer"
-          onClick={HandleSubmit}
-        >
-          {isUserIptNumber ? "تایید" : "ورود به دیجی کالا"}
-        </button>
+        {isUserAxist ? (
+          <Link href="/" className="w-full">
+            <button
+              type="reset"
+              className="p-3 rounded-lg bg-red-500/90 w-full my-5 text-white cursor-pointer"
+              onClick={HandleSubmit}
+            >
+              {userIptType == "number" ? "تایید" : "ورود به دیجی کالا"}
+            </button>
+          </Link>
+        ) : (
+          <button
+            type="reset"
+            className="p-3 rounded-lg bg-red-500/90 w-full my-5 text-white cursor-pointer"
+            onClick={HandleSubmit}
+          >
+            {userIptType == "number" ? "تایید" : "ورود به دیجی کالا"}
+          </button>
+        )}
 
-        {!isUserIptNumber && (
+        {userIptType == "number" && (
           <p className="text-gray-500 text-[11px]">
             ورود شما به معنای پذیرش{" "}
             <span className="text-blue-500 cursor-pointer">
