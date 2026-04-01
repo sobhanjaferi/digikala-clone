@@ -17,7 +17,7 @@ export interface IappContext {
 }
 
 const containerContext = createContext({} as IappContext);
-export function useAppContext() {
+export function useAppContext(): IappContext {
   return useContext(containerContext);
 }
 
@@ -25,7 +25,7 @@ function AppContext({ children }: { children: React.ReactNode }) {
   // =============== open & close search bar panel ===============
   const [searchBar, setSearchBar] = useState<boolean>(false);
 
-  useEffect(() => {
+  useEffect((): void => {
     const saved = localStorage.getItem("searchBar");
 
     saved != null && setSearchBar(JSON.parse(saved));
@@ -37,7 +37,7 @@ function AppContext({ children }: { children: React.ReactNode }) {
     null,
   );
 
-  useEffect(() => {
+  useEffect((): void => {
     if (userIptType == "number") {
       const userNumber = localStorage.getItem("userNumber");
 

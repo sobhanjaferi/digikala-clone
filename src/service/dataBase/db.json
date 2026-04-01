@@ -4,13 +4,13 @@
       "id": "1",
       "name": "سرویس ها",
       "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/4f1a58293164d31b1a3cf1ef41f6ba4ba4fa4087_1739791745.png?x-oss-process=image/resize,w_300/quality,q_90",
-      "address": "servic"
+      "address": "/servic"
     },
     {
       "id": "2",
       "name": "دیجی کالا",
       "imgUrl": "https://dkstatics-public.digikala.com/superapp-file/e65a134ca4ce423f9724a4a57cde4979f9d7f6b2_1764619352.png?x-oss-process=image/resize,w_300/quality,q_90",
-      "address": ""
+      "address": "/"
     },
     {
       "id": "3",
@@ -777,7 +777,5 @@
       "price": "258,000"
     }
   ],
-  "loginAndSignin": [
-    
-  ]
+  "loginAndSignin": []
 }

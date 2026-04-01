@@ -16,11 +16,7 @@ function Header() {
         dir="rtl"
       >
         {data?.map((item: IheaderOption) => (
-          <HeaderOption
-            key={item.id}
-            {...item}
-            tailwind="w-22 sm:col-span-1 sm:w-full"
-          />
+          <HeaderOption key={item.id} {...item} />
         ))}
       </header>
 

@@ -1,7 +1,6 @@
 export interface IheaderOption {
-  id?: number;
+  readonly id?: number;
   name: string;
   imgUrl: string;
   address: string;
-  tailwind?: string;
 }
