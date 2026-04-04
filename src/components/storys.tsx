@@ -1,3 +1,5 @@
+"use client";
+
 import useStorys from "@/service/Header/Header-Storys/hook";
 import Story from "./story";
 import { Istory } from "@/service/Header/Header-Storys/types";

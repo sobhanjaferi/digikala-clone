@@ -8,7 +8,7 @@ function OfferSliderProduct({
   title,
 }: IofferSlide) {
   return (
-    <div className="h-full min-w-40 w-40 p-1 bg-white cursor-pointer">
+    <div>
       <img src={imgUrl} className="w-11/12 mx-auto h-7/12" alt={title} />
 
       <div className="text-center w-full h-5/12">

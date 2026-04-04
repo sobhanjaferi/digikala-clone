@@ -1,15 +1,16 @@
 "use client";
 
-import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
-import StartIcon from "@mui/icons-material/Start";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-
 import { useAppContext } from "@/context/appContext";
 import SearchIpt from "./SearchIpt";
 import SingingBtn from "./SinginBtn";
 import HeaderNavBar from "./headerNavBar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+// =============== MUI Icons ===============
+import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
+import StartIcon from "@mui/icons-material/Start";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 function HeaderSearchBar() {
   const { searchBar, setSearchBar, isUserAxist } = useAppContext();

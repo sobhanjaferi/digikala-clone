@@ -1,5 +1,5 @@
 export interface IofferSlide {
-  id?: number;
+  readonly id?: number;
   imgUrl: string;
   title: string;
   offerPrice: string;

@@ -5,10 +5,10 @@ import OfferSliderProduct from "./OfferSliderProduct";
 import useOfferSlider from "@/service/Offer-Slider/hook";
 import { IofferSlide } from "@/service/Offer-Slider/types";
 import LoadingAndError from "./LoadingAndError";
-
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRef } from "react";
+import Link from "next/link";
 
 function OfferSlider({ anyStyles }: { anyStyles: string }) {
   const { data = [], isError, isPending, isFetching } = useOfferSlider();
@@ -50,7 +50,13 @@ function OfferSlider({ anyStyles }: { anyStyles: string }) {
             !isFetching &&
             !isPending &&
             data.map((item: IofferSlide) => (
-              <OfferSliderProduct key={item.id} {...item} />
+              <Link
+                href={`/${item.id}`}
+                key={item.id}
+                className="h-full min-w-40 w-40 p-1 bg-white cursor-pointer"
+              >
+                <OfferSliderProduct {...item} />
+              </Link>
             ))}
 
           <LoadingAndError
