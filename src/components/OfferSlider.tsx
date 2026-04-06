@@ -53,7 +53,7 @@ function OfferSlider({ anyStyles }: { anyStyles: string }) {
               <Link
                 href={`/${item.id}`}
                 key={item.id}
-                className="h-full min-w-40 w-40 p-1 bg-white cursor-pointer"
+                className="h-full min-w-45 p-1 bg-white cursor-pointer"
               >
                 <OfferSliderProduct {...item} />
               </Link>

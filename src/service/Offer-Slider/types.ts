@@ -5,4 +5,5 @@ export interface IofferSlide {
   offerPrice: string;
   off: number;
   realPrice: string;
+  images: Array<string>;
 }

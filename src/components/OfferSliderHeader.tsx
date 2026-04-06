@@ -20,7 +20,7 @@ function OfferSliderHeader() {
   return (
     <>
       <header
-        className={`absolute left-0 right-0 top-0 bottom-0 transition-all duration-400 ease-in-out ${searchBar ? "" : "-translate-y-300"}`}
+        className={`absolute left-0 right-0 top-0 bottom-0 transition-all duration-500 ease-in-out ${searchBar ? "" : "-translate-y-300"}`}
       >
         <section
           className={`absolute left-0 right-0 top-0  gap-3 w-full bg-white z-10 p-3 flex justify-evenly items-center`}
@@ -42,7 +42,7 @@ function OfferSliderHeader() {
         </section>
 
         <section
-          className={`absolute left-0 right-0 top-17 bottom-0 bg-black/30 shadow-2xl shadow-black`}
+          className={`absolute left-0 right-0 top-17 bottom-0 bg-black/30`}
         ></section>
       </header>
 
@@ -63,7 +63,7 @@ function OfferSliderHeader() {
           </Link>
         </div>
 
-        <p className="w-full flex flex-row-reverse justify-start items-center gap-2 text-gray-600 text-sm">
+        <p className="w-full flex flex-row-reverse justify-start items-center gap-1 sm:gap-2 text-gray-600 text-[10px] sm:text-sm">
           <span className="border-b border-gray-500 p-1">دیجی کالا</span>
           {"<"}
           <span className="border-b border-gray-500 p-1">کالای دیجیتال</span>

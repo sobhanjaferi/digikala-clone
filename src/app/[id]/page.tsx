@@ -5,6 +5,7 @@ import OfferSliderHeader from "@/components/OfferSliderHeader";
 import { useEffect, useState } from "react";
 import useOfferSliderProducts from "@/service/Offer-slider-products/hook";
 import { IofferSlide } from "@/service/Offer-Slider/types";
+import OfferSliderPictures from "@/components/OfferSliderPictures";
 
 export interface Tprops {
   params: Promise<{ readonly id: string }>;
@@ -35,6 +36,10 @@ function Product({ params }: Tprops) {
           <OfferSliderHeader />
         </section>
       </header>
+
+      <main className="w-full flex flex-col justify-between items-center">
+        <OfferSliderPictures />
+      </main>
     </>
   );
 }
