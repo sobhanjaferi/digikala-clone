@@ -5,6 +5,7 @@ import ProductItemsChaptier from "./ProductItemsChaptier";
 import useAllProductChaptiers from "@/service/All-product-chaptiers/hook";
 import IproductChaptier from "@/service/All-product-chaptiers/types";
 import LoadingAndError from "./LoadingAndError";
+import {SupportedHTMLElements} from "styled-components";
 
 function AllProductChaptiers() {
   const [screenSize, setScreenSize] = useState<boolean>(false);
@@ -17,7 +18,7 @@ function AllProductChaptiers() {
   } = useAllProductChaptiers();
 
   useEffect(() => {
-    setScreenSize((prev) => (window.innerWidth >= 1024 ? true : false));
+    setScreenSize((prev: boolean) => (window.innerWidth >= 1024 ? true : false));
 
     const scrollBar = () => {
       setScreenSize((prev) => (window.innerWidth >= 1024 ? true : false));

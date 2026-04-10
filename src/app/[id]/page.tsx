@@ -1,29 +1,18 @@
-"use client";
-
 import Header from "@/components/HeaderMobileSlider";
 import OfferSliderHeader from "@/components/OfferSliderHeader";
-import { useEffect, useState } from "react";
-import useOfferSliderProducts from "@/service/Offer-slider-products/hook";
-import { IofferSlide } from "@/service/Offer-Slider/types";
+
 import OfferSliderPictures from "@/components/OfferSliderPictures";
+import axios from "axios";
 
 export interface Tprops {
   params: Promise<{ readonly id: string }>;
   searchParams: Promise<{}>;
 }
 
-function Product({ params }: Tprops) {
-  const [id, setId] = useState<string>();
-
-  useEffect(() => {
-    const HandleProductId = async (): Promise<void> => setId((await params).id);
-
-    HandleProductId();
-  }, [id]);
-
-  const { data } = useOfferSliderProducts(id);
-
-  data as IofferSlide;
+async function Product({ params }: Tprops) {
+  const result = await axios.get(
+    `http://localhost:8000/OfferSlider/${(await params).id}`,
+  );
 
   return (
     <>
@@ -38,7 +27,7 @@ function Product({ params }: Tprops) {
       </header>
 
       <main className="w-full flex flex-col justify-between items-center">
-        <OfferSliderPictures />
+        <OfferSliderPictures pictures={result.data} />
       </main>
     </>
   );
