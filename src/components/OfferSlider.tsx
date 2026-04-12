@@ -59,6 +59,8 @@ function OfferSlider({ anyStyles }: { anyStyles: string }) {
               </Link>
             ))}
 
+          {/* =============== Handle Error and Fetching =============== */}
+
           <LoadingAndError
             isError={isError}
             isFetching={isFetching}
@@ -73,7 +75,45 @@ function OfferSlider({ anyStyles }: { anyStyles: string }) {
           <ArrowForwardIosIcon fontSize="small" />
         </section>
 
-        <OfferSliderTimer />
+        <div className="w-full lg:w-40 flex lg:flex-col-reverse justify-between items-center h-10 lg:h-full py-5 pb-7 lg:p-2">
+          <div className="flex justify-between items-center mx-2 cursor-pointer">
+            <ArrowBackIosIcon fontSize="inherit" />
+
+            <p className="mb-1">همه</p>
+          </div>
+
+          {/* =============== Offer Timer =============== */}
+
+          <section className="flex lg:flex-col-reverse h-full justify-between items-center lg:mb-5">
+            <img
+              src="https://dkstatics-public.digikala.com/digikala-static/0d072059918d0c22b88320554ce4b3e07d0472f2_1746354551.svg"
+              className="w-15 hidden lg:block"
+              alt=""
+            />
+
+            <OfferSliderTimer addAnyStyles="rounded bg-white text-black w-8 h-8 flex justify-center items-center text-sm" />
+
+            <div className="flex justify-between items-center">
+              <img
+                src="https://dkstatics-public.digikala.com/digikala-static/e0c05f5d67bf71be7605ec22cb3ee6be57d43e94_1746354561.svg"
+                className="w-30 ml-3 lg:hidden"
+                alt=""
+              />
+
+              <img
+                src="https://www.digikala.com/statics/img/svg/specialCarousel/Amazings.svg"
+                className="hidden lg:block w-25"
+                alt=""
+              />
+
+              <img
+                src="https://dkstatics-public.digikala.com/digikala-static/0d072059918d0c22b88320554ce4b3e07d0472f2_1746354551.svg"
+                className="w-7 ml-2 lg:hidden"
+                alt=""
+              />
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );

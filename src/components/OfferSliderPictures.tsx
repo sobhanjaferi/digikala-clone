@@ -6,11 +6,7 @@ import { useState } from "react";
 // =============== MUI Icons ===============
 import CloseIcon from "@mui/icons-material/Close";
 
-function OfferSliderPictures({
-  pictures,
-}: {
-  pictures: IofferSlide;
-}) {
+function OfferSliderPictures({ pictures }: { pictures: IofferSlide }) {
   const [selectPictureBox, setSelectPictureBox] = useState<boolean>(false);
   let [focusImg, setFocusImg] = useState<string | undefined>(
     pictures?.images[0],
