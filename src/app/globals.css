@@ -4,7 +4,7 @@
   box-shadow: 0px 0px 15px black;
 }
 
-/* =============== ScrollBar =============== */
+/* =============== Scrollbar =============== */
 
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE & Edge */
@@ -13,4 +13,66 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
+}
+
+/* =============== Loading Text Animation =============== */
+
+.loadingTextAnimation {
+  animation: LoadingTextAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes LoadingTextAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(50px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translatey(-50px);
+  }
+
+  100% {
+    transform: translatey(0);
+  }
+}
+
+/* =============== Loading Wrapper Animation =============== */
+
+.loadingAnimation {
+  animation: LoadingAnimation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes LoadingAnimation {
+  0% {
+    background-color: black;
+  }
+
+  25% {
+    background-color: rgb(28, 28, 28);
+  }
+
+  50% {
+    background-color: black;
+  }
+
+  75% {
+    background-color: rgb(28, 28, 28);
+  }
+
+  100% {
+    background-color: black;
+  }
 }
