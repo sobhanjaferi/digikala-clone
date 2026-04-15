@@ -1,21 +1,23 @@
 "use client";
 
-import { useAppContext } from "@/context/appContext";
-import SearchIpt from "./SearchIpt";
-import SingingBtn from "./SinginBtn";
-import HeaderNavBar from "./headerNavBar";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-
 // =============== MUI Icons ===============
 import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
 import StartIcon from "@mui/icons-material/Start";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
-function HeaderSearchBar() {
-  const { searchBar, setSearchBar, isUserAxist } = useAppContext();
+//  =============== Import Section ===============
+import { useAppContext } from "@/context/appContext";
+import SearchIpt from "./SearchIpt";
+import SingingBtn from "./SinginBtn";
+import HeaderNavBar from "./headerNavBar";
+import Link from "next/link";
+import { ReactElement, useEffect, useState } from "react";
+import Image from "next/image";
 
+function HeaderSearchBar(): ReactElement {
+  const { searchBar, setSearchBar, isUserAxist } = useAppContext();
   const [screenScrollSize, setScreenScrollSize] = useState<boolean>(false);
+  const [newSearchBar, setNewSearchBar] = useState<boolean>(!searchBar);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,14 @@ function HeaderSearchBar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const HandleSearchBar: () => void = () => {
+    setNewSearchBar(!searchBar);
+
+    setSearchBar(newSearchBar);
+
+    localStorage.setItem("searchBar", JSON.stringify(newSearchBar));
+  };
 
   return (
     <div className="relative">
@@ -49,13 +59,7 @@ function HeaderSearchBar() {
         <div className="flex justify-end sm:justify-center lg:justify-between items-center w-200">
           <div
             className="relative w-[85%] mr-5 lg:w-150 xl:w-full"
-            onClick={() => {
-              let newSearchBar = !searchBar;
-
-              setSearchBar(newSearchBar);
-
-              localStorage.setItem("searchBar", JSON.stringify(newSearchBar));
-            }}
+            onClick={HandleSearchBar}
           >
             <div className="absolute left-3 top-2.5 text-gray-600">
               <FilterCenterFocusIcon />
@@ -69,10 +73,12 @@ function HeaderSearchBar() {
           </div>
 
           <Link href="/">
-            <img
-              src="./images/digikala-header.png"
+            <Image
+              src="/images/digikala-header.png"
               alt="digikalaHeader"
               className="w-40 h-6 hidden lg:block ml-5"
+              width={0}
+              height={0}
             />
           </Link>
         </div>
@@ -94,16 +100,7 @@ function HeaderSearchBar() {
         <div className="flex justify-evenly items-center p-1 pl-3 ">
           <SearchIpt />
 
-          <div
-            className="px-3"
-            onClick={() => {
-              let newSearchBar = !searchBar;
-
-              setSearchBar(newSearchBar);
-
-              localStorage.setItem("searchBar", JSON.stringify(newSearchBar));
-            }}
-          >
+          <div className="px-3" onClick={HandleSearchBar}>
             <StartIcon />
           </div>
         </div>

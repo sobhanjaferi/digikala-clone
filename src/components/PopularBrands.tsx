@@ -1,28 +1,30 @@
 "use client";
 
+// =============== Material UI Icons ===============
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+// =============== Import Section ===============
+import { ReactElement, RefObject, useRef } from "react";
 import PopularBrand from "./PopularBrand";
 import usePopularBrans from "@/service/Popular-Brands/hook";
 import IpopularBrand from "@/service/Popular-Brands/types";
 
-// =============== Material UI Icons ===============
+function PopularBrands(): ReactElement {
+  const { data = [] }: { data: IpopularBrand[] | undefined } =
+    usePopularBrans();
 
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useRef } from "react";
+  const scrollBar: RefObject<HTMLDivElement | null> =
+    useRef<HTMLDivElement>(null);
 
-function PopularBrands() {
-  const { data = [] } = usePopularBrans();
-
-  const scrollBar = useRef<HTMLDivElement>(null);
-
-  const HandleScrollRight = () => {
+  const HandleScrollRight = (): void => {
     scrollBar.current?.scrollBy({
       left: 400,
       behavior: "smooth",
     });
   };
 
-  const HandleScrollLeft = () => {
+  const HandleScrollLeft = (): void => {
     scrollBar.current?.scrollBy({
       left: -400,
       behavior: "smooth",

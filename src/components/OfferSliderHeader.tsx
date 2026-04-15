@@ -7,10 +7,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import StartIcon from "@mui/icons-material/Start";
 
+// =============== Import Section ===============
 import Link from "next/link";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
-function OfferSliderHeader() {
+function OfferSliderHeader(): ReactElement {
   const [searchBar, setSearchBar] = useState<boolean>(false);
 
   const HandleSearchBar = (): void => {

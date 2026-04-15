@@ -1,3 +1,5 @@
+// =============== Import Sections ===============
+
 import type { Metadata } from "next";
 import "./globals.css";
 import RQProvider from "@/context/RQProvider";
@@ -20,7 +22,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-        <link rel="stylesheet" href="./icons/css/all.min.css" />
+        <link rel="" href="./icons/css/all.min.css" />
       </head>
 
       <body>

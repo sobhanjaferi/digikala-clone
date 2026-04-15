@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 // =============== MUI Icons ===============
 import PlaceIcon from "@mui/icons-material/Place";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
@@ -8,13 +6,16 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 
+//  =============== Import Section ===============
+import { ReactElement } from "react";
+
 interface Idata {
   id: number;
   title: string;
-  icon?: ReactElement<any, string>;
+  icon?: ReactElement<string>;
 }
 
-function HeaderNavBar() {
+function HeaderNavBar(): ReactElement {
   const data: Idata[] = [
     {
       id: 1,

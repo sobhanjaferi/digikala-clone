@@ -1,10 +1,12 @@
 "use client";
 
+//  =============== Import Section ===============
 import useHeaderOptions from "@/service/Header/Header-Options/hook";
 import HeaderOption from "./HeaderOption";
 import { IheaderOption } from "@/service/Header/Header-Options/types";
+import { ReactElement } from "react";
 
-function HeaderOptions() {
+function HeaderOptions(): ReactElement {
   const { data } = useHeaderOptions();
 
   return (

@@ -1,27 +1,37 @@
 "use client";
 
+// =============== MUI Icons ===============
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+// =============== Import Section ===============
 import useStorys from "@/service/Header/Header-Storys/hook";
 import Story from "./story";
 import { Istory } from "@/service/Header/Header-Storys/types";
-
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LoadingAndError from "./LoadingAndError";
-import { useRef } from "react";
+import { ReactElement, RefObject, useRef } from "react";
 
-function Storys() {
-  const { data = [], isError, isFetching, isPending } = useStorys();
+interface Tdata {
+  data: Istory[] | undefined;
+  isError: boolean;
+  isFetching: boolean;
+  isPending: boolean;
+}
 
-  const scrollRef = useRef<HTMLDivElement>(null);
+function Storys(): ReactElement {
+  const { data = [], isError, isFetching, isPending }: Tdata = useStorys();
 
-  const HandleScrollLeft = () => {
+  const scrollRef: RefObject<HTMLDivElement | null> =
+    useRef<HTMLDivElement>(null);
+
+  const HandleScrollLeft = (): void => {
     scrollRef.current?.scrollBy({
       left: 120,
       behavior: "smooth",
     });
   };
 
-  const HandleScrollRight = () => {
+  const HandleScrollRight = (): void => {
     scrollRef.current?.scrollBy({
       left: -120,
       behavior: "smooth",

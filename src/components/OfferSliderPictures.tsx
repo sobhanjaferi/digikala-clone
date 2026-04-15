@@ -1,16 +1,20 @@
 ﻿"use client";
 
-import { IofferSlide } from "@/service/Offer-Slider/types";
-import { useState } from "react";
-
 // =============== MUI Icons ===============
 import CloseIcon from "@mui/icons-material/Close";
 
-function OfferSliderPictures({ pictures }: { pictures: IofferSlide }) {
+// =============== Import Section ===============
+import { IofferSlide } from "@/service/Offer-Slider/types";
+import { ReactElement, useState } from "react";
+import Image from "next/image";
+
+function OfferSliderPictures({
+  pictures,
+}: {
+  pictures: IofferSlide;
+}): ReactElement {
   const [selectPictureBox, setSelectPictureBox] = useState<boolean>(false);
-  let [focusImg, setFocusImg] = useState<string | undefined>(
-    pictures?.images[0],
-  );
+  const [focusImg, setFocusImg] = useState<string>(pictures?.images[0]);
 
   const HandlePictureBox: () => void = (): void => {
     setSelectPictureBox((prev: boolean): boolean => !prev);
@@ -18,20 +22,24 @@ function OfferSliderPictures({ pictures }: { pictures: IofferSlide }) {
 
   return (
     <section className="w-full h-80 flex justify-center items-center">
-      <img
+      <Image
         onClick={HandlePictureBox}
         src={focusImg}
         alt="offer slider picture"
         className="h-full w-90"
+        width={0}
+        height={0}
       />
 
       <div
         className={`absolute top-0 left-0 right-0 bottom-0 z-100 bg-black/90 ${!selectPictureBox && "hidden"} flex justify-center items-center`}
       >
-        <img
+        <Image
           src={focusImg}
           className="h-100 sm:h-150 lg:h-full p-3 w-full max-w-200"
           alt="offer slider selected picture"
+          width={0}
+          height={0}
         />
 
         <div
@@ -48,12 +56,14 @@ function OfferSliderPictures({ pictures }: { pictures: IofferSlide }) {
           <ul className="w-full h-full rounded-xl border border-white scrollbar-hide overflow-x-auto flex justify-start items-center gap-1 p-1">
             {pictures?.images.map((item: string, index: number) => (
               <li key={index} className="min-w-20 h-full">
-                <img
+                <Image
                   src={item}
                   alt="offer slider picture"
                   className="h-full w-full rounded-md"
+                  width={0}
+                  height={0}
                   onClick={(): void => {
-                    setFocusImg((prev: string | undefined): string => item);
+                    setFocusImg(item);
                   }}
                 />
               </li>

@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 function LoadingAndError({
   isError,
   isPending,
@@ -6,7 +8,7 @@ function LoadingAndError({
   isError: boolean;
   isPending: boolean;
   isFetching: boolean;
-}) {
+}): ReactElement {
   return (
     <>
       {isError && (

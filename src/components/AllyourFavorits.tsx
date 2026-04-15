@@ -1,12 +1,14 @@
 "use client";
 
+//  =============== Import Section ===============
 import useYourFavoritsFour from "@/service/Your-Favorits/Four/hook";
 import YourFavorits from "./YourFavorits";
 import useYourFavoritsOne from "@/service/Your-Favorits/One/hook";
 import useYourFavoritsThree from "@/service/Your-Favorits/Three/hook";
 import useYourFavoritsTwo from "@/service/Your-Favorits/Two/hook";
+import { ReactElement } from "react";
 
-function AllYourFavorits() {
+function AllYourFavorits(): ReactElement {
   const { data: dataOne = [] } = useYourFavoritsOne();
 
   const { data: dataTwo = [] } = useYourFavoritsTwo();

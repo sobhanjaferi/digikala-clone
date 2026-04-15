@@ -1,3 +1,5 @@
+// =============== Import Sections ===============
+
 import AllProductChaptiers from "@/components/AllProductChaptiers";
 import AllYourFavorits from "@/components/AllyourFavorits";
 import Chaptears from "@/components/chapters";

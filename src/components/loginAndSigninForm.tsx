@@ -1,13 +1,13 @@
 "use client";
 
+//  =============== Import Section ===============
 import usePostLoginAndSigninFormData from "@/service/Login-and-signin/hook";
 import { TloginAndSignin } from "@/service/Login-and-signin/types";
-import { useEffect, useState } from "react";
-
+import { ReactElement, useEffect, useState } from "react";
 import Link from "next/link";
 import { useAppContext } from "@/context/appContext";
 
-function LoginAndSigninForm() {
+function LoginAndSigninForm(): ReactElement {
   const [isFcous, setIsFcous] = useState<boolean>(false);
 
   // =============== checking user is login or signin ===============
@@ -27,9 +27,9 @@ function LoginAndSigninForm() {
 
   const { mutate } = usePostLoginAndSigninFormData();
 
-  let splitUserIpt = userIpt.emailOrNumber.split("");
+  const splitUserIpt = userIpt.emailOrNumber.split("");
 
-  const [firstNumbers, setFirstNumbers] = useState<string[]>([
+  const [firstNumbers] = useState<string[]>([
     "0",
     "1",
     "2",
@@ -45,25 +45,25 @@ function LoginAndSigninForm() {
   // =============== user timer vars ===============
 
   const [randomCode, setRandomCode] = useState<number | null>(null);
-  let [second, setSecond] = useState<number>(59);
-  let [minet, setMinet] = useState<number>(2);
+  const [second, setSecond] = useState<number>(59);
+  const [minet, setMinet] = useState<number>(2);
 
   // =============== timer for user enter the code ===============
   const intervalTimer = useEffect(() => {
-    const timer = setInterval(() => {
-      setSecond((prev) => (prev -= 1));
+    const timer = setInterval((): void => {
+      setSecond((prev: number): number => (prev -= 1));
 
       if (second == 0 && minet > 0) {
-        setSecond((prev) => 59);
+        setSecond(59);
 
-        setMinet((prev) => (prev -= 1));
+        setMinet((prev: number): number => (prev -= 1));
       } else if (second == 0 && minet == 0) {
         clearInterval(timer);
       }
     }, 1000);
 
-    () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(timer);
+  });
 
   const HandleSubmit = () => {
     // =============== checked ipt type ===============

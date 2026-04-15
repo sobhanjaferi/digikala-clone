@@ -1,7 +1,9 @@
+// =============== Import Section ===============
 import IyourFavoritItem from "@/service/Your-Favorits/types";
 import YourFavoritItem from "./YourFavorit";
+import { ReactElement } from "react";
 
-function YourFavorits({ data }: { data: IyourFavoritItem[] }) {
+function YourFavorits({ data }: { data: IyourFavoritItem[] }): ReactElement {
   return (
     <div
       className="flex flex-col justify-between items-center mx-5 mb-10 lg:my-0 lg:mx-2"

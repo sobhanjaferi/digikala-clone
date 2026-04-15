@@ -1,18 +1,19 @@
+/* =============== Import Sections =============== */
 import Header from "@/components/HeaderMobileSlider";
 import OfferSliderHeader from "@/components/OfferSliderHeader";
 import OfferSliderPictures from "@/components/OfferSliderPictures";
 import OfferSliderProductOfferTimer from "@/components/OfferSliderProductOfferTimer";
-import axios, { AxiosResponse } from "axios";
+import { IofferSlide } from "@/service/Offer-Slider/types";
+import axios from "axios";
 
 export interface Tprops {
   params: Promise<{ readonly id: string }>;
-  searchParams: Promise<{}>;
 }
 
 async function Product({ params }: Tprops) {
   // =============== Get Product Data ===============
 
-  const result: AxiosResponse = await axios.get(
+  const { data }: { data: IofferSlide } = await axios.get(
     `http://localhost:8000/OfferSlider/${(await params).id}`,
   );
 
@@ -32,7 +33,7 @@ async function Product({ params }: Tprops) {
 
       <main className="w-full flex flex-col justify-between items-center">
         {/* =============== Product Pictures =============== */}
-        <OfferSliderPictures pictures={result.data} />
+        <OfferSliderPictures pictures={data} />
 
         {/* =============== Offer Slider Timer  =============== */}
         <OfferSliderProductOfferTimer />
@@ -52,6 +53,10 @@ async function Product({ params }: Tprops) {
             <p className="p-2 cursor-pointer bg-blue-600">options</p>
           </div>
         </section>
+
+        <p className="w-full text-right p-3" dir="rtl">
+          {data.title}
+        </p>
       </main>
     </>
   );

@@ -1,8 +1,10 @@
 "use client";
 
+//  =============== Import Section ===============
 import useOfferItems from "@/service/Offer-Items/hook";
 import OfferItem from "./OfferItem";
 import LoadingAndError from "./LoadingAndError";
+import { ReactElement } from "react";
 
 interface IofferItem {
   id: number;
@@ -10,7 +12,7 @@ interface IofferItem {
   imgUrl: string;
 }
 
-function OfferItems() {
+function OfferItems(): ReactElement {
   const { data = [], isError, isPending, isFetching } = useOfferItems();
 
   return (

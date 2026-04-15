@@ -1,12 +1,10 @@
-"use client";
-
+//  =============== Import Section ===============
 import { IheaderOption } from "@/service/Header/Header-Options/types";
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { ReactElement } from "react";
 
-function HeaderOption({ name, imgUrl, address }: IheaderOption) {
-  const pagePathName = usePathname();
-
+function HeaderOption({ name, imgUrl, address }: IheaderOption): ReactElement {
   return (
     <Link href={`/${address}`} className="block lg:hidden mt-20">
       <div
@@ -14,7 +12,13 @@ function HeaderOption({ name, imgUrl, address }: IheaderOption) {
           address ? "" : "bg-red-500 text-white"
         }`}
       >
-        <img src={imgUrl} className="w-8 h-8" alt={name} />
+        <Image
+          src={imgUrl}
+          className="w-8 h-8"
+          width={0}
+          height={0}
+          alt={name}
+        />
 
         <p>{name}</p>
       </div>

@@ -1,6 +1,8 @@
+//  =============== Import Section ===============
+import { ReactElement } from "react";
 import HeaderSearchBar from "./HeaderSearchBar";
 
-function Header() {
+function Header(): ReactElement {
   return (
     <nav>
       <section>
