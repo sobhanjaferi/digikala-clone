@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e827ed-0b2b-48fc-92fe-fc172608874d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OfferSliderHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OfferSliderHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/dataBase/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/dataBase/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OfferSliderPictures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OfferSliderPictures.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/product-page&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -41,6 +42,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/sot837/Programms/front end/digikala-clone/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -76,10 +79,32 @@
       <workItem from="1775475460786" duration="213000" />
       <workItem from="1775475950653" duration="522000" />
       <workItem from="1775485860143" duration="1161000" />
+      <workItem from="1775725131776" duration="10000" />
+      <workItem from="1775726211531" duration="35000" />
+      <workItem from="1775729778728" duration="939000" />
+      <workItem from="1775734634823" duration="445000" />
+      <workItem from="1775735127727" duration="2924000" />
+      <workItem from="1775738381031" duration="7000" />
+      <workItem from="1775740271289" duration="422000" />
+      <workItem from="1775740712952" duration="1149000" />
+      <workItem from="1775822200785" duration="694000" />
+      <workItem from="1775832571324" duration="8000" />
+      <workItem from="1775973023988" duration="667000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
