@@ -6,6 +6,7 @@ import { TloginAndSignin } from "@/service/Login-and-signin/types";
 import { ReactElement, useEffect, useState } from "react";
 import Link from "next/link";
 import { useAppContext } from "@/context/appContext";
+import Image from "next/image";
 
 function LoginAndSigninForm(): ReactElement {
   const [isFcous, setIsFcous] = useState<boolean>(false);
@@ -81,14 +82,15 @@ function LoginAndSigninForm(): ReactElement {
 
   // =============== saved user number in localStorage ===============
   useEffect(() => {
-    userIptType == "number" &&
+    if (userIptType == "number") {
       localStorage.setItem("userNumber", JSON.stringify(userIpt.emailOrNumber));
-  }, [userIptType]);
+    }
+  }, [userIptType, userIpt]);
 
   // =============== return timer for enter new secr code ===============
   const HandleReturnTimer = () => {
-    setSecond((prev) => 59);
-    setMinet((prev) => 2);
+    setSecond((): number => 59);
+    setMinet((): number => 2);
 
     intervalTimer;
   };
@@ -105,15 +107,19 @@ function LoginAndSigninForm(): ReactElement {
   }, [userIptType]);
 
   useEffect(() => {
-    randomCode != null && alert(`کد ورود شما: ${randomCode}`);
+    if (randomCode != null) {
+      alert(`کد ورود شما: ${randomCode}`);
+    }
   }, [randomCode]);
 
   return (
     <section className="w-full h-full flex flex-col justify-center items-center">
-      <img
-        src="./images/digikala-header.png"
+      <Image
+        src="/images/digikala-header.png"
         alt="digikala-Logo"
         className={`w-40`}
+        width={0}
+        height={0}
       />
 
       <form
@@ -145,7 +151,11 @@ function LoginAndSigninForm(): ReactElement {
             id="numberOrEmail"
             onClick={() => setIsFcous(true)}
             onChange={(e) => {
-              e.target.value != "" ? setIsFcous(true) : setIsFcous(false);
+              if (e.target.value != "") {
+                setIsFcous(true);
+              } else {
+                setIsFcous(false);
+              }
 
               if (randomCode != null) {
                 if (randomCode === parseInt(e.target.value)) {
