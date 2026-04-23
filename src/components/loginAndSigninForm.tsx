@@ -1,13 +1,14 @@
 "use client";
 
+//  =============== Import Section ===============
 import usePostLoginAndSigninFormData from "@/service/Login-and-signin/hook";
 import { TloginAndSignin } from "@/service/Login-and-signin/types";
-import { useEffect, useState } from "react";
-
+import { ReactElement, useEffect, useState } from "react";
 import Link from "next/link";
 import { useAppContext } from "@/context/appContext";
+import Image from "next/image";
 
-function LoginAndSigninForm() {
+function LoginAndSigninForm(): ReactElement {
   const [isFcous, setIsFcous] = useState<boolean>(false);
 
   // =============== checking user is login or signin ===============
@@ -27,9 +28,9 @@ function LoginAndSigninForm() {
 
   const { mutate } = usePostLoginAndSigninFormData();
 
-  let splitUserIpt = userIpt.emailOrNumber.split("");
+  const splitUserIpt = userIpt.emailOrNumber.split("");
 
-  const [firstNumbers, setFirstNumbers] = useState<string[]>([
+  const [firstNumbers] = useState<string[]>([
     "0",
     "1",
     "2",
@@ -45,25 +46,25 @@ function LoginAndSigninForm() {
   // =============== user timer vars ===============
 
   const [randomCode, setRandomCode] = useState<number | null>(null);
-  let [second, setSecond] = useState<number>(59);
-  let [minet, setMinet] = useState<number>(2);
+  const [second, setSecond] = useState<number>(59);
+  const [minet, setMinet] = useState<number>(2);
 
   // =============== timer for user enter the code ===============
   const intervalTimer = useEffect(() => {
-    const timer = setInterval(() => {
-      setSecond((prev) => (prev -= 1));
+    const timer = setInterval((): void => {
+      setSecond((prev: number): number => (prev -= 1));
 
       if (second == 0 && minet > 0) {
-        setSecond((prev) => 59);
+        setSecond(59);
 
-        setMinet((prev) => (prev -= 1));
+        setMinet((prev: number): number => (prev -= 1));
       } else if (second == 0 && minet == 0) {
         clearInterval(timer);
       }
     }, 1000);
 
-    () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(timer);
+  });
 
   const HandleSubmit = () => {
     // =============== checked ipt type ===============
@@ -81,14 +82,15 @@ function LoginAndSigninForm() {
 
   // =============== saved user number in localStorage ===============
   useEffect(() => {
-    userIptType == "number" &&
+    if (userIptType == "number") {
       localStorage.setItem("userNumber", JSON.stringify(userIpt.emailOrNumber));
-  }, [userIptType]);
+    }
+  }, [userIptType, userIpt]);
 
   // =============== return timer for enter new secr code ===============
   const HandleReturnTimer = () => {
-    setSecond((prev) => 59);
-    setMinet((prev) => 2);
+    setSecond((): number => 59);
+    setMinet((): number => 2);
 
     intervalTimer;
   };
@@ -105,15 +107,19 @@ function LoginAndSigninForm() {
   }, [userIptType]);
 
   useEffect(() => {
-    randomCode != null && alert(`کد ورود شما: ${randomCode}`);
+    if (randomCode != null) {
+      alert(`کد ورود شما: ${randomCode}`);
+    }
   }, [randomCode]);
 
   return (
     <section className="w-full h-full flex flex-col justify-center items-center">
-      <img
-        src="./images/digikala-header.png"
+      <Image
+        src="/images/digikala-header.png"
         alt="digikala-Logo"
         className={`w-40`}
+        width={0}
+        height={0}
       />
 
       <form
@@ -145,7 +151,11 @@ function LoginAndSigninForm() {
             id="numberOrEmail"
             onClick={() => setIsFcous(true)}
             onChange={(e) => {
-              e.target.value != "" ? setIsFcous(true) : setIsFcous(false);
+              if (e.target.value != "") {
+                setIsFcous(true);
+              } else {
+                setIsFcous(false);
+              }
 
               if (randomCode != null) {
                 if (randomCode === parseInt(e.target.value)) {

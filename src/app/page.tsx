@@ -1,19 +1,33 @@
+// =============== Import Sections ===============
+
 import AllProductChaptiers from "@/components/AllProductChaptiers";
 import AllYourFavorits from "@/components/AllyourFavorits";
 import Chaptears from "@/components/chapters";
 import Header from "@/components/HeaderMobileSlider";
+import HeaderOptions from "@/components/HeaderOptions";
 import HeaderSlider from "@/components/HeaderSlider";
 import OfferItems from "@/components/OfferItems";
 import OfferSlider from "@/components/OfferSlider";
 import PopularBrands from "@/components/PopularBrands";
+import Storys from "@/components/storys";
 import SupperMarketOffer from "@/components/SupperMarketOffer";
 import SupperOffers from "@/components/supperOffers";
 
 export default function Home() {
   return (
     <main>
+      <header>
+        <section>
+          <HeaderOptions />
+        </section>
+
+        <section>
+          <Header />
+        </section>
+      </header>
+
       <section>
-        <Header />
+        <Storys />
       </section>
 
       <section>

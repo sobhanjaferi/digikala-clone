@@ -1,6 +1,10 @@
+// =============== MUI Icons ===============
 import SearchIcon from "@mui/icons-material/Search";
 
-function SearchIpt() {
+// =============== Imports Section ===============
+import { ReactElement } from "react";
+
+function SearchIpt(): ReactElement {
   return (
     <div className="w-full relative">
       <input

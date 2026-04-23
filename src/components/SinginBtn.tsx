@@ -1,10 +1,17 @@
+// =============== MUI Icons ===============
 import LoginIcon from "@mui/icons-material/Login";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import { useAppContext } from "@/context/appContext";
 
-function SingingBtn() {
-  const { isUserAxist, isUserNumber } = useAppContext();
+// =============== Import Section ===============
+import { useAppContext } from "@/context/appContext";
+import { ReactElement } from "react";
+
+function SingingBtn(): ReactElement {
+  const {
+    isUserAxist,
+    isUserNumber,
+  }: { isUserAxist: boolean; isUserNumber: string } = useAppContext();
 
   return (
     <div className="hidden lg:flex justify-evenly items-center w-[20%] lg:w-70 xl:w-100">

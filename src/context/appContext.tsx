@@ -1,7 +1,7 @@
 "use client";
 
-import { createContext, useEffect, useState } from "react";
-
+/* =============== Import Sections =============== */
+import { createContext, ReactElement, useEffect, useState } from "react";
 import React, { useContext } from "react";
 
 export interface IappContext {
@@ -21,14 +21,20 @@ export function useAppContext(): IappContext {
   return useContext(containerContext);
 }
 
-function AppContext({ children }: { children: React.ReactNode }) {
+function AppContext({ children }: { children: React.ReactNode }): ReactElement {
   // =============== open & close search bar panel ===============
   const [searchBar, setSearchBar] = useState<boolean>(false);
 
   useEffect((): void => {
-    const saved = localStorage.getItem("searchBar");
+    const SaveSearchBar: () => void = () => {
+      const saved = localStorage.getItem("searchBar");
 
-    saved != null && setSearchBar(JSON.parse(saved));
+      if (saved != null) {
+        setSearchBar(JSON.parse(saved));
+      }
+    };
+
+    SaveSearchBar();
   }, []);
   // =============== checking user is login or signin ===============
   const [isUserAxist, setIsUserAxist] = useState<boolean>(false);
@@ -39,9 +45,15 @@ function AppContext({ children }: { children: React.ReactNode }) {
 
   useEffect((): void => {
     if (userIptType == "number") {
-      const userNumber = localStorage.getItem("userNumber");
+      const CheckUserIptType: () => void = () => {
+        const userNumber = localStorage.getItem("userNumber");
 
-      userNumber != null && setIsUserNumber(JSON.parse(userNumber));
+        if (userNumber != null) {
+          setIsUserNumber(JSON.parse(userNumber));
+        }
+      };
+
+      CheckUserIptType();
     }
   }, [isUserNumber, userIptType]);
 
