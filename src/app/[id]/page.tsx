@@ -18,7 +18,7 @@ async function Product({ params }: Tprops) {
   const { id } = await params;
 
   const { data }: { data: IofferSlide } = await axios.get(
-    `http://localhost:3000/api/offer/slider/${id}`,
+    `https://digikala-clone-gilt.vercel.app/api/offer/slider/${id}`,
   );
 
   return (
