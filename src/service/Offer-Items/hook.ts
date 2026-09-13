@@ -8,7 +8,7 @@ export default function useOfferItems() {
     queryKey: ["OfferItems"],
 
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/OfferItems");
+      const { data } = await axios.get("/api/offer/items");
 
       return data as IofferItem[];
     },

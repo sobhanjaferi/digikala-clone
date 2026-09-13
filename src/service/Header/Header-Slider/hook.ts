@@ -7,7 +7,7 @@ function useHeaderSlider() {
   return useQuery<IheaderSlider[]>({
     queryKey: ["headerSlider"],
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/headerSlider");
+      const { data } = await axios.get("/api/header/sliders");
 
       return data as IheaderSlider[];
     },

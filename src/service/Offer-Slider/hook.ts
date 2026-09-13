@@ -8,7 +8,7 @@ export default function useOfferSlider() {
     queryKey: ["OfferSlider"],
 
     queryFn: async () => {
-      const { data } = await axios("http://localhost:8000/OfferSlider");
+      const { data } = await axios("/api/offer/slider");
 
       return data as IofferSlide[];
     },

@@ -7,7 +7,7 @@ export default function usePopularBrans() {
   return useQuery<IpopularBrand[]>({
     queryKey: ["PopularBrands"],
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/popularBrands");
+      const { data } = await axios.get("/api/product/brands");
 
       return data as IpopularBrand[];
     },

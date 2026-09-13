@@ -8,7 +8,7 @@ export default function useYourFavoritsThree() {
     queryKey: ["yourFavoritsThree"],
     queryFn: async () => {
       const { data } = await axios.get(
-        "http://localhost:8000/yourFavoritsThree",
+        "/api/product/favorits/three",
       );
 
       return data as IyourFavoritItem[];

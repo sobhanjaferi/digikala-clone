@@ -15,22 +15,24 @@ export interface Tprops {
 async function Product({ params }: Tprops) {
   // =============== Get Product Data ===============
 
+  const { id } = await params;
+
   const { data }: { data: IofferSlide } = await axios.get(
-    `http://localhost:8000/OfferSlider/${(await params).id}`,
+    `http://localhost:3000/api/offer/slider/${id}`,
   );
 
   return (
     <>
       <header>
         {/* =============== Product Header in lg Size =============== */}
-        <section className={`hidden lg:block`}>
+        <div className={`hidden lg:block`}>
           <Header />
-        </section>
+        </div>
 
         {/* =============== Product Header in mobile Size =============== */}
-        <section>
+        <div>
           <OfferSliderHeader />
-        </section>
+        </div>
       </header>
 
       <main className="w-full flex flex-col justify-between items-center">

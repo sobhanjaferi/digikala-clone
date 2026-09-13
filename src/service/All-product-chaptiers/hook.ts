@@ -7,7 +7,7 @@ export default function useAllProductChaptiers() {
   return useQuery<IproductChaptier[]>({
     queryKey: ["AllProductChaptiers"],
     queryFn: async () => {
-      const { data } = await axios("http://localhost:8000/AllProductChaptiers");
+      const { data } = await axios("/api/product/chaptiers");
 
       return data as IproductChaptier[];
     },
