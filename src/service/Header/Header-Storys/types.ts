@@ -1,5 +1,7 @@
 export interface Istory {
-  id: number;
+  readonly id: number;
   imgUrl: string;
   content: string;
+  profileImg: string;
+  videoUrl: string;
 }

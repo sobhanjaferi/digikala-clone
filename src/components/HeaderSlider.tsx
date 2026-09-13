@@ -1,30 +1,42 @@
 "use client";
 
-import useHeaderSlider from "@/service/Header/Header-Slider/hook";
-import SlideOfHeaderSlider from "./SliderOfHeaderSlider";
-import { useEffect, useState } from "react";
-
+// =============== MUI Icons ===============
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import LoadingAndError from "./LoadingAndError";
 
-function HeaderSlider() {
-  const { data = [], isError, isPending, isFetching } = useHeaderSlider();
+//  =============== Import Section ===============
+import useHeaderSlider from "@/service/Header/Header-Slider/hook";
+import SlideOfHeaderSlider from "./SliderOfHeaderSlider";
+import { ReactElement, useEffect, useState } from "react";
+import LoadingAndError from "./LoadingAndError";
+import { IheaderSlider } from "@/service/Header/Header-Slider/types";
+
+interface Tdata {
+  data: IheaderSlider[] | undefined;
+  isError: boolean;
+  isPending: boolean;
+  isFetching: boolean;
+}
+
+function HeaderSlider(): ReactElement {
+  const { data, isError, isPending, isFetching }: Tdata = useHeaderSlider();
   const [countSlides, setCountSlides] = useState<number>(1);
   const [showArrowKeys, setShowArrowKeys] = useState<boolean>(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCountSlides((prev: number) => (prev < 11 ? (prev += 1) : (prev = 1)));
+    const interval = setInterval((): void => {
+      setCountSlides((prev: number): number => (prev < 11 ? (prev += 1) : 1));
     }, 5000);
+
+    return (): void => clearInterval(interval);
   }, []);
 
-  const HandleForwardSlide = () => {
-    setCountSlides((prev) => (prev < 11 ? (prev += 1) : (prev = 1)));
+  const HandleForwardSlide: () => void = () => {
+    setCountSlides((prev: number): number => (prev < 11 ? (prev += 1) : 1));
   };
 
-  const HandleBackwardSlide = () => {
-    setCountSlides((prev) => (prev > 1 ? (prev -= 1) : (prev = 11)));
+  const HandleBackwardSlide: () => void = () => {
+    setCountSlides((prev: number): number => (prev > 1 ? (prev -= 1) : 11));
   };
 
   return (
@@ -43,7 +55,10 @@ function HeaderSlider() {
           setShowArrowKeys(false);
         }}
       >
-        <SlideOfHeaderSlider imgUrl={data[countSlides]?.imgUrl} />
+        <SlideOfHeaderSlider
+          imgAddress={data ? data?.[countSlides].imgUrl : "/"}
+        />
+        
 
         <section
           className={`flex justify-between items-center absolute bottom-2 right-2 lg:bottom-8 lg:right-5 gap-3 ${

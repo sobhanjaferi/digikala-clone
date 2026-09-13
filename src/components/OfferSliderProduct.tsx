@@ -1,4 +1,7 @@
+// =============== Import Section ===============
 import { IofferSlide } from "@/service/Offer-Slider/types";
+import Image from "next/image";
+import { ReactElement } from "react";
 
 function OfferSliderProduct({
   imgUrl,
@@ -6,10 +9,16 @@ function OfferSliderProduct({
   offerPrice,
   realPrice,
   title,
-}: IofferSlide) {
+}: IofferSlide): ReactElement {
   return (
-    <div className="h-full min-w-40 w-40 p-1 bg-white cursor-pointer">
-      <img src={imgUrl} className="w-11/12 mx-auto h-7/12" alt={title} />
+    <div>
+      <Image
+        src={imgUrl}
+        className="w-11/12 mx-auto h-7/12"
+        alt={title}
+        width={0}
+        height={0}
+      />
 
       <div className="text-center w-full h-5/12">
         <p className="text-gray-600 w-full h-1/2 text-sm">{title}</p>

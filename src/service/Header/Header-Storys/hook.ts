@@ -1,3 +1,4 @@
+// =============== Import Sections ===============
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Istory } from "./types";
@@ -7,7 +8,7 @@ export default function useStorys() {
     queryKey: ["headerStory"],
 
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:8000/headerStorys");
+      const { data } = await axios.get("/api/header/storys");
 
       return data as Istory[];
     },
